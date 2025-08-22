@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt7f4x3vuf6m8"]
+
+[ext_resource type="Texture2D" uid="uid://cha81to604yej" path="res://assets/card/IMG_2112.JPG" id="1_flyuu"]
+
+[node name="up_damage" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(192.75, 366.556)
+scale = Vector2(0.283796, 0.283796)
+texture = ExtResource("1_flyuu")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://djdr8ipdv6y3a"]
+
+[ext_resource type="Texture2D" uid="uid://dx8s2rl1dw5xh" path="res://assets/card/IMG_2099.JPG" id="1_ypooc"]
+
+[node name="protect_life" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159, 382)
+scale = Vector2(0.347147, 0.347147)
+texture = ExtResource("1_ypooc")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6nrokrsa0ltp"]
+
+[ext_resource type="Texture2D" uid="uid://djkg02myfjaqy" path="res://assets/card/16068fb2775050bb8163de15988c0960.jpg" id="1_whc4b"]
+
+[node name="heal_card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(166, 375)
+scale = Vector2(0.370245, 0.370245)
+texture = ExtResource("1_whc4b")

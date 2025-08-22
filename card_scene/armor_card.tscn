@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://urd53vkflm24"]
+
+[ext_resource type="Texture2D" uid="uid://fwbcmmj5mbed" path="res://assets/card/IMG_2115.JPG" id="1_uklfh"]
+
+[node name="armor_card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(216, 348)
+scale = Vector2(0.446332, 0.446332)
+texture = ExtResource("1_uklfh")
