@@ -10,6 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Game Project"
+config/name="Diceventure:Rolling in to the darkness"
+run/main_scene="uid://bfmwk2xm77yow"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://b12nejdv8dwpg"
