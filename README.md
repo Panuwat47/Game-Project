@@ -31,4 +31,6 @@ git pull --rebase<br>
 git checkout main<br>
 git pull --rebase<br>
 git branch -d feature/ชื่อฟีเจอร์<br>
-git push origin --delete feature/ชื่อฟีเจอร์
+git push origin --delete feature/ชื่อฟีเจอร์<br>
+**Credits**<br>
+2D Assets: https://brullov.itch.io/generic-char-asset
