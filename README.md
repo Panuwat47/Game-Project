@@ -1,5 +1,5 @@
 **สำหรับเพื่อนที่ทำงานเสร็จ อยากอัปเดตขึ้น GitHub (แนะนำทำผ่าน Pull Request)**
-
+**ก่อนอื่นเปิด terminal ขึ้นมาแล้วพิมพ์ cd Game-Project**
 **อัปเดตฐานให้ใหม่ก่อน**<br>
 git checkout main<br>
 git pull --rebase<br>
