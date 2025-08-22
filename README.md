@@ -1,5 +1,11 @@
 **สำหรับเพื่อนที่ทำงานเสร็จ อยากอัปเดตขึ้น GitHub (แนะนำทำผ่าน Pull Request)**<br><br>
 **ก่อนอื่นเปิด terminal ขึ้นมาแล้วพิมพ์ cd Game-Project**<br><br>
+**ก่อนเปิด Godot ต้องดึงงานล่าสุดลงมา
+หรือปิด Godot ชั่วคราวถ้ากำลังเปิด (ลดโอกาสไฟล์ถูกล็อก)
+อัปเดตสาขาหลัก**<br>
+git checkout main<br>
+git pull --rebase<br>
+เวลาเปิดโปรเจกต์ใน Godot (ถ้ามี asset ใหม่ Godot จะ re-import ให้เอง ไม่ต้อง commit .godot/.import)<br>
 **อัปเดตฐานให้ใหม่ก่อน**<br>
 git checkout main<br>
 git pull --rebase<br>
@@ -26,7 +32,7 @@ git checkout main<br>
 git pull --rebase<br>
 เวลาเปิดโปรเจกต์ใน Godot (ถ้ามี asset ใหม่ Godot จะ re-import ให้เอง ไม่ต้อง commit .godot/.import)<br>
 
-**เปิด Pull Request บน GitHub ไปที่สาขา main ขอรีวิวและกด Merge เมื่ออนุมัติ(อันนี้เดี๋ยวทำเอง)**
+**เปิด Pull Request บน GitHub ไปที่สาขา main ขอรีวิวและกด Merge เมื่ออนุมัติ**
 ลบสาขาที่จบงาน (บน GitHub หรือ)<br>
 git checkout main<br>
 git pull --rebase<br>
