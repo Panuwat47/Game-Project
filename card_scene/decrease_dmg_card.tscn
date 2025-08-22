@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://di721et6q6ul3"]
+
+[ext_resource type="Texture2D" uid="uid://ntoujpbi2ty4" path="res://assets/card/3fe5ee6e75acdd6177c962d2c2ffa55c.jpg" id="1_0yapx"]
+
+[node name="decrease_dmg_card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(253, 366)
+scale = Vector2(0.3675, 0.3675)
+texture = ExtResource("1_0yapx")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://rdmq61ohon6"]
+
+[ext_resource type="Texture2D" uid="uid://bjlb8l4h8qhw8" path="res://assets/card/IMG_2116.JPG" id="1_s556d"]
+
+[node name="all_atk_crad" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(166, 411)
+scale = Vector2(0.442308, 0.442308)
+texture = ExtResource("1_s556d")
