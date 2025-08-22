@@ -1,6 +1,6 @@
 **สำหรับเพื่อนที่ทำงานเสร็จ อยากอัปเดตขึ้น GitHub (แนะนำทำผ่าน Pull Request)**
 
-**อัปเดตฐานให้ใหม่ก่อน**
+**อัปเดตฐานให้ใหม่ก่อน**\n
 -git checkout main
 -git pull --rebase
 ถ้าทำ git pull --rebase แล้วขึ้นแบบนี้ error: cannot pull with rebase: You have unstaged changes.
