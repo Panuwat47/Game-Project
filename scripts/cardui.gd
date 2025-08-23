@@ -7,6 +7,7 @@ signal reparent_requested(which_card_ui: cardui)
 @onready var state: Label = $state
 @onready var drop_point_detector: Area2D = $droppointdetector
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
+@onready var targets: Array[Node] = []
 
 func _ready() -> void:
 	#Events.card_aim_started.connect(_on_card_drag_or_aiming_started)
@@ -30,3 +31,12 @@ func _on_mouse_exited() -> void:
 
 func _on_reparent_requested(which_card_ui: cardui) -> void:
 	pass # Replace with function body.
+
+
+func _on_droppointdetector_area_entered(area: Area2D) -> void:
+	if not targets.has(area):
+		targets.append(area)
+
+
+func _on_droppointdetector_area_exited(area: Area2D) -> void:
+	targets.erase(area)
