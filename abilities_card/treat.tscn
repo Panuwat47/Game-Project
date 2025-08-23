@@ -5,8 +5,12 @@
 [node name="treat" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(112.25, 448.098)
 scale = Vector2(0.303669, 0.291201)
+=======
+scale = Vector2(0.2, 0.2)
+>>>>>>> origin/main
 texture = ExtResource("1_v8jpn")
 
 [node name="Label" type="Label" parent="."]

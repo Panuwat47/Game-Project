@@ -5,8 +5,12 @@
 [node name="up_max_hp" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(116, 447.655)
 scale = Vector2(0.25, 0.299461)
+=======
+scale = Vector2(0.2, 0.2)
+>>>>>>> origin/main
 texture = ExtResource("1_mkcsa")
 
 [node name="Label" type="Label" parent="."]

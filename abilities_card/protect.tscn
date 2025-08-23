@@ -5,8 +5,12 @@
 [node name="protect" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(112, 448)
 scale = Vector2(0.200224, 0.206898)
+=======
+scale = Vector2(0.2, 0.2)
+>>>>>>> origin/main
 texture = ExtResource("1_yd1hm")
 
 [node name="Label" type="Label" parent="."]

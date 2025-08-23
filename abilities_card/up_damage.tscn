@@ -5,8 +5,12 @@
 [node name="up_damage" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(112, 447.658)
 scale = Vector2(0.207407, 0.200819)
+=======
+scale = Vector2(0.2, 0.2)
+>>>>>>> origin/main
 texture = ExtResource("1_wjd2g")
 
 [node name="Label" type="Label" parent="."]

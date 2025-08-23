@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://djojyq52fnrqw"]
-
-[node name="Card" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
