@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5ds4mgy8umsw"]
 
-[ext_resource type="Texture2D" uid="uid://cmfxtnb3myykv" path="res://assets/card/3f289264e6b9bd8cb13708ac65251c31.jpg" id="1_6stfu"]
+[ext_resource type="Texture2D" uid="uid://cyth23iyvjnlw" path="res://assets/card/pixel_art_large (10).png" id="1_6stfu"]
 
 [node name="double_dice_card" type="Node2D"]
 
@@ -8,3 +8,15 @@
 position = Vector2(195, 353)
 scale = Vector2(0.422554, 0.422554)
 texture = ExtResource("1_6stfu")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Double dice"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 32.0
+offset_right = 91.0
+offset_bottom = 55.0
+text = "ได้รับการทอยลูกเต๋า X2"

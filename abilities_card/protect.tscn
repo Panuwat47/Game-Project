@@ -1,10 +1,23 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3fjmqk6fn5yy"]
 
-[ext_resource type="Texture2D" uid="uid://dv4pjiv7h2cxk" path="res://assets/card/IMG_2106.JPG" id="1_nyolc"]
+[ext_resource type="Texture2D" uid="uid://bxl35pwop5vja" path="res://assets/card/pixel_art_large (5).png" id="1_yd1hm"]
 
 [node name="protect" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(204, 360)
 scale = Vector2(0.294395, 0.294395)
-texture = ExtResource("1_nyolc")
+texture = ExtResource("1_yd1hm")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessing of Protection"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -3.0
+offset_top = 33.0
+offset_right = 165.0
+offset_bottom = 56.0
+text = "พรแห่งการปกป้องจากทุกสิ่ง
+ได้รับเกราะป้องกัน"
