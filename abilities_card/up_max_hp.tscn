@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp70ly43g35a1"]
+
+[ext_resource type="Texture2D" uid="uid://2kquj5qewfq1" path="res://assets/card/pixel_art_large (6).png" id="1_mkcsa"]
+
+[node name="up_max_hp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 447.862)
+scale = Vector2(0.241379, 0.299784)
+texture = ExtResource("1_mkcsa")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "The Blessing of Patience"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "พรแห่งความอดทนมอบกายาที่ทำให้ตัวเจ้าแข็งแกร่งขึ้นเพื่อที่เจ้าจะคงยืนหยัดได้นานมากขึ้น
+ได้รับความจุเลือดเพิ่มขึ้น"

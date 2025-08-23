@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgo2yiv5nmiw"]
+
+[ext_resource type="Texture2D" uid="uid://sobjjgrf4ot6" path="res://assets/card/pixel_art_large (2).png" id="1_uklfh"]
+
+[node name="armor_card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.347826)
+texture = ExtResource("1_uklfh")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "armor"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "โล่ป้องกัน"

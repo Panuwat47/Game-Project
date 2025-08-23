@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://brox2s4oupalm"]
+
+[ext_resource type="Texture2D" uid="uid://bu2kbgow40r2k" path="res://assets/card/pixel_art_large (7).png" id="1_0at7p"]
+
+[node name="prodect_life" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.302124)
+texture = ExtResource("1_0at7p")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessings of life"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "พรแห่งชีวิตที่จะถูกหยิบยื่นให้แก่เจ้าในยามที่เจ้าถึงวาระสุดท้ายของชีวิตเพื่อโอกาสอีกครั้ง
+ได้รับกันตาย 1 ครั้ง"

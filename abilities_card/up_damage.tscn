@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtn51d8ll5bos"]
+
+[ext_resource type="Texture2D" uid="uid://d00dx4p765lxf" path="res://assets/card/pixel_art_large.png" id="1_wjd2g"]
+
+[node name="up_damage" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 448)
+scale = Vector2(0.207407, 0.2)
+texture = ExtResource("1_wjd2g")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessing of Strength"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "พรแห่งความแข็งแกร่งพรที่จะมอบความแข็งแกร่งแก่ผู้ที่ยืนยัดแก่ความตาย
+ได้รับพลังโจมตีเพิ่มขึ้น"
