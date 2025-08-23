@@ -12,7 +12,7 @@ git pull --rebase<br>
 **ถ้าทำ git pull --rebase แล้วขึ้นแบบนี้<br> error: cannot pull with rebase: You have unstaged changes.<br>
 error: Please commit or stash them.<br> ให้ข้ามไปเลย**<br>
 
-**สร้างสาขาสำหรับงานนี้**<br>
+**สร้างสาขาสำหรับงานนี้(ทำแค่ครั้งแรกครั้งเดียวพอไม่ต้องทำอีก)**<br>
 git checkout -b feature/ชื่อฟีเจอร์ #อันนี้ให้ชื่อชื่อฟีเจอร์เป็นของตัวเอง<br>
 โดยที่<br>-**ภูมิ**: ทำการ์ดและการ์ดพิเศษ,<br>
 -**ดิววี่**: ทำมอนเตอร์,<br>
