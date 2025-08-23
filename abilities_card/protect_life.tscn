@@ -1,10 +1,23 @@
 [gd_scene load_steps=2 format=3 uid="uid://djdr8ipdv6y3a"]
 
-[ext_resource type="Texture2D" uid="uid://dx8s2rl1dw5xh" path="res://assets/card/IMG_2099.JPG" id="1_ypooc"]
+[ext_resource type="Texture2D" uid="uid://bu2kbgow40r2k" path="res://assets/card/pixel_art_large (7).png" id="1_xojl0"]
 
 [node name="protect_life" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(159, 382)
 scale = Vector2(0.347147, 0.347147)
-texture = ExtResource("1_ypooc")
+texture = ExtResource("1_xojl0")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessings of life"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 35.0
+offset_right = 43.0
+offset_bottom = 58.0
+text = "เอื้อมมือแห่งชีวิตที่ยื่นลงมาจากฟากฟ้าดึงตัวข้าจากความตาย
+กันตาย 1 ครั้ง"

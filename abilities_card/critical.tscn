@@ -1,10 +1,23 @@
 [gd_scene load_steps=2 format=3 uid="uid://di3pygbrk00k2"]
 
-[ext_resource type="Texture2D" uid="uid://c74ecf0voerxe" path="res://assets/card/IMG_2107.JPG" id="1_tqmwo"]
+[ext_resource type="Texture2D" uid="uid://bhrf276y2cbpc" path="res://assets/card/pixel_art_large (1).png" id="1_52l6y"]
 
 [node name="Critical" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(188, 359)
 scale = Vector2(0.309783, 0.309783)
-texture = ExtResource("1_tqmwo")
+texture = ExtResource("1_52l6y")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessing of Opportunity"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 34.0
+offset_right = 186.0
+offset_bottom = 57.0
+text = "พรแห่งเทพที่มอบโอกาสของความสำเร็จแก่ข้า
+เพิ่มโอกาสคริติคอล"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://di721et6q6ul3"]
 
-[ext_resource type="Texture2D" uid="uid://ntoujpbi2ty4" path="res://assets/card/3fe5ee6e75acdd6177c962d2c2ffa55c.jpg" id="1_0yapx"]
+[ext_resource type="Texture2D" uid="uid://divhmqigovcyg" path="res://assets/card/pixel_art_large (9).png" id="1_0yapx"]
 
 [node name="decrease_dmg_card" type="Node2D"]
 
@@ -8,3 +8,15 @@
 position = Vector2(253, 366)
 scale = Vector2(0.3675, 0.3675)
 texture = ExtResource("1_0yapx")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Decrese damage"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 31.0
+offset_right = 131.0
+offset_bottom = 54.0
+text = "ลดดาเมจที่ศัตรูทำได้ลง"
