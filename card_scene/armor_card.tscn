@@ -6,15 +6,17 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(216, 348)
-scale = Vector2(0.446332, 0.446332)
+scale = Vector2(0.281, 0.281)
 texture = ExtResource("1_uklfh")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "shield"
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = 3.0
 offset_top = 39.0
 offset_right = 50.0

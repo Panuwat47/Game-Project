@@ -5,8 +5,7 @@
 [node name="treat" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(170, 375)
-scale = Vector2(0.368207, 0.368207)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_v8jpn")
 
 [node name="Label" type="Label" parent="."]

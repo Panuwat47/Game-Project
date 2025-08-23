@@ -5,19 +5,22 @@
 [node name="Critical" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(188, 359)
-scale = Vector2(0.309783, 0.309783)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_52l6y")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 81.0
+offset_top = -102.0
+offset_right = 264.0
+offset_bottom = -79.0
 text = "Blessing of Opportunity"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 34.0
-offset_right = 186.0
-offset_bottom = 57.0
+offset_left = 78.0
+offset_top = -66.0
+offset_right = 385.0
+offset_bottom = -17.0
 text = "พรแห่งเทพที่มอบโอกาสของความสำเร็จแก่ข้า
 เพิ่มโอกาสคริติคอล"
+metadata/_edit_use_anchors_ = true

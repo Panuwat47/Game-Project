@@ -6,17 +6,21 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(166, 411)
-scale = Vector2(0.442308, 0.442308)
+scale = Vector2(0.175, 0.175)
 texture = ExtResource("1_s556d")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 219.0
+offset_top = 377.0
+offset_right = 320.0
+offset_bottom = 400.0
 text = "Group attack"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 31.0
-offset_right = 103.0
-offset_bottom = 54.0
+offset_left = 221.0
+offset_top = 408.0
+offset_right = 371.0
+offset_bottom = 431.0
 text = "โจมตีเป้าหมายทั้งหมด"
+metadata/_edit_use_anchors_ = true

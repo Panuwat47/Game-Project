@@ -5,8 +5,7 @@
 [node name="protect" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(204, 360)
-scale = Vector2(0.294395, 0.294395)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_yd1hm")
 
 [node name="Label" type="Label" parent="."]
