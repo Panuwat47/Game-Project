@@ -5,8 +5,8 @@
 [node name="armor_card" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(216, 348)
-scale = Vector2(0.446332, 0.446332)
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.347826)
 texture = ExtResource("1_uklfh")
 
 [node name="Label" type="Label" parent="."]

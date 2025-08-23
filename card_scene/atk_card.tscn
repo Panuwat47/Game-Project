@@ -5,8 +5,8 @@
 [node name="atk_card" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(198, 321)
-scale = Vector2(0.234167, 0.234167)
+position = Vector2(112, 448)
+scale = Vector2(0.186667, 0.18506)
 texture = ExtResource("1_2lm4x")
 
 [node name="Label" type="Label" parent="."]

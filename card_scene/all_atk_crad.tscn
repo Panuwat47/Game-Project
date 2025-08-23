@@ -5,8 +5,8 @@
 [node name="all_atk_crad" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(166, 411)
-scale = Vector2(0.442308, 0.442308)
+position = Vector2(112, 448)
+scale = Vector2(0.430769, 0.415584)
 texture = ExtResource("1_s556d")
 
 [node name="Label" type="Label" parent="."]

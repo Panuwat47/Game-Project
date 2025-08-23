@@ -5,8 +5,8 @@
 [node name="decrease_dmg_card" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(253, 366)
-scale = Vector2(0.3675, 0.3675)
+position = Vector2(112, 448)
+scale = Vector2(0.186667, 0.32)
 texture = ExtResource("1_0yapx")
 
 [node name="Label" type="Label" parent="."]

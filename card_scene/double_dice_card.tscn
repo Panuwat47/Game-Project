@@ -5,8 +5,8 @@
 [node name="double_dice_card" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(195, 353)
-scale = Vector2(0.422554, 0.422554)
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.29313)
 texture = ExtResource("1_6stfu")
 
 [node name="Label" type="Label" parent="."]

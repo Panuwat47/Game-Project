@@ -5,8 +5,8 @@
 [node name="up_damage" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(192.75, 366.556)
-scale = Vector2(0.283796, 0.283796)
+position = Vector2(112, 447.658)
+scale = Vector2(0.207407, 0.200819)
 texture = ExtResource("1_wjd2g")
 
 [node name="Label" type="Label" parent="."]

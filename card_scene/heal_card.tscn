@@ -5,8 +5,8 @@
 [node name="heal_card" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(166, 375)
-scale = Vector2(0.370245, 0.370245)
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.347826)
 texture = ExtResource("1_whc4b")
 
 [node name="Label" type="Label" parent="."]
