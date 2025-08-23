@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://wm0gr5ts6tl4"]
+
+[sub_resource type="GDScript" id="GDScript_1nssr"]
+script/source = "extends Resource
+class_name CardData
+
+@export var id: String
+@export var name: String
+@export var description: String
+@export var type: String = \"attack\" # \"attack\",\"block\",\"heal\",...
+@export var base_value: int = 6
+@export var cost: int = 0
+@export var target_mode: String = \"single\" # \"single\",\"all\",\"self\"
+"
+
+[resource]
+script = SubResource("GDScript_1nssr")
+id = ""
+name = ""
+description = ""
+type = "attack"
+base_value = 6
+cost = 0
+target_mode = "single"
