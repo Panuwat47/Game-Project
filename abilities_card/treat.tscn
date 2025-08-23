@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfghxck6jffh"]
+
+[ext_resource type="Texture2D" uid="uid://ddireiievgxg7" path="res://assets/card/pixel_art_large (11).png" id="1_v8jpn"]
+
+[node name="treat" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 448)
+scale = Vector2(0.304348, 0.291351)
+texture = ExtResource("1_v8jpn")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Blessing of Healing"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "พรแห่งการรักษาผู้ศรัทธาชะโลมกายาด้วยน้ำศักดิ์สิทธิ์เพื่อฟื้นชีวติที่สูญหาย
+ได้รับการรักษาเต็มเปี่ยม"
