@@ -1,0 +1,141 @@
+[gd_scene load_steps=21 format=3 uid="uid://6gig0v74mrns"]
+
+[ext_resource type="Texture2D" uid="uid://baxk5y4sxfauu" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_attack.png" id="1_1bmtn"]
+[ext_resource type="Texture2D" uid="uid://g8egf22i0utb" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_death.png" id="2_xihbb"]
+[ext_resource type="Texture2D" uid="uid://di7w7nyd47i6u" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_hurt.png" id="3_7j4ki"]
+[ext_resource type="Texture2D" uid="uid://b8ybkkbdq1p3a" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_idle.png" id="4_s7bhp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03fhw"]
+atlas = ExtResource("1_1bmtn")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0t3r"]
+atlas = ExtResource("1_1bmtn")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6xhy"]
+atlas = ExtResource("1_1bmtn")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4kjp"]
+atlas = ExtResource("1_1bmtn")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmorr"]
+atlas = ExtResource("2_xihbb")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo716"]
+atlas = ExtResource("2_xihbb")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7n81"]
+atlas = ExtResource("2_xihbb")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4emhs"]
+atlas = ExtResource("2_xihbb")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyehf"]
+atlas = ExtResource("3_7j4ki")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lmio"]
+atlas = ExtResource("3_7j4ki")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x26wn"]
+atlas = ExtResource("4_s7bhp")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unj6m"]
+atlas = ExtResource("4_s7bhp")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hybku"]
+atlas = ExtResource("4_s7bhp")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8qaa"]
+atlas = ExtResource("4_s7bhp")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chcm1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03fhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0t3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6xhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4kjp")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmorr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo716")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7n81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4emhs")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyehf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lmio")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x26wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unj6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hybku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8qaa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5c1n"]
+size = Vector2(32, 24)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_chcm1")
+animation = &"death"
+frame_progress = 0.0468118
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 12)
+shape = SubResource("RectangleShape2D_h5c1n")
