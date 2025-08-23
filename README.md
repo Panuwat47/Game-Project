@@ -3,14 +3,12 @@
 **ก่อนเปิด Godot ต้องดึงงานล่าสุดลงมา
 หรือปิด Godot ชั่วคราวถ้ากำลังเปิด (ลดโอกาสไฟล์ถูกล็อก)
 อัปเดตสาขาหลัก**<br>
-git checkout main<br>
-git pull --rebase<br>
-เวลาเปิดโปรเจกต์ใน Godot (ถ้ามี asset ใหม่ Godot จะ re-import ให้เอง ไม่ต้อง commit .godot/.import)<br>
 **อัปเดตฐานให้ใหม่ก่อน**<br>
 git checkout main<br>
 git pull --rebase<br>
 **ถ้าทำ git pull --rebase แล้วขึ้นแบบนี้<br> error: cannot pull with rebase: You have unstaged changes.<br>
 error: Please commit or stash them.<br> ให้ข้ามไปเลย**<br>
+เวลาเปิดโปรเจกต์ใน Godot (ถ้ามี asset ใหม่ Godot จะ re-import ให้เอง ไม่ต้อง commit .godot/.import)<br>
 
 **สร้างสาขาสำหรับงานนี้(ทำแค่ครั้งแรกครั้งเดียวพอครั้งต่อไปไม่ต้องทำอีก)**<br>
 git checkout -b feature/ชื่อฟีเจอร์ #อันนี้ให้ชื่อชื่อฟีเจอร์เป็นของตัวเอง<br>
