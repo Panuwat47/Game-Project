@@ -23,6 +23,10 @@ git commit -m "feat: อธิบายสิ่งที่ทำ"<br>
 
 **push สาขาขึ้นGithub**<br>
 git push -u origin feature/ชื่อฟีเจอร์<br>
+ถ้า push ขึ้น feature ของตัวเองแล้วขึ้นข้อความ **“Everything up-to-date”** ให้ทำตามนี้ <br>
+git switch feature/ประกอบร่างและอื่นๆ<br>
+git merge main # เอาคอมมิทที่นำหน้าของ main มาใส่ใน feature<br>
+git push<br>
 
 **สำหรับทุกคนในทีม อยากดึงงานล่าสุดลงมา
 ปิด Godot ชั่วคราวถ้ากำลังเปิด (ลดโอกาสไฟล์ถูกล็อก)
