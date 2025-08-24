@@ -1,14 +1,14 @@
 class_name CardStateMachine
 extends Node
 
-@export var initial_state: cardstate
+@export var initial_state: CardState
 
-var current_state: cardstate
+var current_state: CardState
 var states := {}
 
 
-func init(card: cardui) -> void:
-	for child: cardstate in get_children():
+func init(card: CardUI) -> void:
+	for child: CardState in get_children():
 		if child:
 			states[child.state] = child
 			child.transition_requested.connect(_on_transition_requested)
@@ -39,11 +39,11 @@ func on_mouse_exited() -> void:
 		current_state.on_mouse_exited()
 
 
-func _on_transition_requested(from: cardstate, to: cardstate.State) -> void:
+func _on_transition_requested(from: CardState, to: CardState.State) -> void:
 	if from != current_state:
 		return
 		
-	var new_state: cardstate = states[to]
+	var new_state: CardState = states[to]
 	if not new_state:
 		return
 	
