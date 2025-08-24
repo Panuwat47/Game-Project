@@ -1,22 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp70ly43g35a1"]
+[gd_scene load_steps=6 format=3 uid="uid://dp70ly43g35a1"]
 
+[ext_resource type="Texture2D" uid="uid://dreh8lei51say" path="res://assets/card/IMG_2122.PNG" id="1_56w7d"]
 [ext_resource type="Texture2D" uid="uid://2kquj5qewfq1" path="res://assets/card/pixel_art_large (6).png" id="1_mkcsa"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_xybdc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7jsjh"]
+font = ExtResource("3_xybdc")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqvi6"]
+font = ExtResource("3_xybdc")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="up_max_hp" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 447.862)
-scale = Vector2(0.241379, 0.299784)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_56w7d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -151.862)
+scale = Vector2(0.62069, 0.537284)
 texture = ExtResource("1_mkcsa")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = 194.0
+offset_bottom = 169.0
 text = "The Blessing of Patience"
+label_settings = SubResource("LabelSettings_7jsjh")
 
-[node name="Label2" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "พรแห่งความอดทนมอบกายาที่ทำให้ตัวเจ้าแข็งแกร่งขึ้นเพื่อที่เจ้าจะคงยืนหยัดได้นานมากขึ้น
-ได้รับความจุเลือดเพิ่มขึ้น"
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = 280.0
+offset_bottom = 300.0
+text = "พรแห่งความอดทนมอบกายาที่ทำให้ตัวเจ้าแข็งแกร่งขึ้น
+เพื่อที่เจ้าจะคงยืนหยัดได้นานมากขึ้น
+
+[ได้รับความจุเลือดเพิ่มขึ้น]"
+label_settings = SubResource("LabelSettings_mqvi6")

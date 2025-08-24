@@ -1,22 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://di721et6q6ul3"]
+[gd_scene load_steps=6 format=3 uid="uid://di721et6q6ul3"]
 
 [ext_resource type="Texture2D" uid="uid://divhmqigovcyg" path="res://assets/card/pixel_art_large (9).png" id="1_0yapx"]
+[ext_resource type="Texture2D" uid="uid://b4kxbkp8a5do" path="res://assets/card/IMG_2123.PNG" id="1_bxwf4"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_pormk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0gn8"]
+font = ExtResource("3_pormk")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wjxjw"]
+font = ExtResource("3_pormk")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="decrease_dmg_card" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.186667, 0.32)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bxwf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -168)
+scale = Vector2(0.48, 0.493333)
 texture = ExtResource("1_0yapx")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -127.0
+offset_bottom = 151.0
 text = "Decrese damage"
+label_settings = SubResource("LabelSettings_o0gn8")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 31.0
-offset_right = 131.0
-offset_bottom = 54.0
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 176.0
+offset_right = -97.0
+offset_bottom = 199.0
 text = "ลดดาเมจที่ศัตรูทำได้ลง"
+label_settings = SubResource("LabelSettings_wjxjw")

@@ -1,22 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfghxck6jffh"]
+[gd_scene load_steps=6 format=3 uid="uid://dfghxck6jffh"]
 
+[ext_resource type="Texture2D" uid="uid://dreh8lei51say" path="res://assets/card/IMG_2122.PNG" id="1_4ym1j"]
 [ext_resource type="Texture2D" uid="uid://ddireiievgxg7" path="res://assets/card/pixel_art_large (11).png" id="1_v8jpn"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_r1fwd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3007h"]
+font = ExtResource("3_r1fwd")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n73qn"]
+font = ExtResource("3_r1fwd")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="treat" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.304348, 0.291351)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4ym1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0.000123024, -168)
+scale = Vector2(0.869565, 0.497724)
 texture = ExtResource("1_v8jpn")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -110.0
+offset_bottom = 151.0
 text = "Blessing of Healing"
+label_settings = SubResource("LabelSettings_3007h")
 
-[node name="Label2" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "พรแห่งการรักษาผู้ศรัทธาชะโลมกายาด้วยน้ำศักดิ์สิทธิ์เพื่อฟื้นชีวติที่สูญหาย
-ได้รับการรักษาเต็มเปี่ยม"
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = 272.0
+offset_bottom = 324.0
+text = "พรแห่งการรักษาผู้ศรัทธาชะโลมกายาด้วยน้ำศักดิ์สิทธิ์เพื่อ
+ฟื้นชีวติที่สูญหาย
+
+[ได้รับการรักษาเต็มเปี่ยม]"
+label_settings = SubResource("LabelSettings_n73qn")

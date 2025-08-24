@@ -1,22 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://brox2s4oupalm"]
+[gd_scene load_steps=6 format=3 uid="uid://brox2s4oupalm"]
 
 [ext_resource type="Texture2D" uid="uid://bu2kbgow40r2k" path="res://assets/card/pixel_art_large (7).png" id="1_0at7p"]
+[ext_resource type="Texture2D" uid="uid://dreh8lei51say" path="res://assets/card/IMG_2122.PNG" id="1_k0dj5"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_fvvpc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_16ct3"]
+font = ExtResource("3_fvvpc")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xlhsn"]
+font = ExtResource("3_fvvpc")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="prodect_life" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.304348, 0.302124)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_k0dj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -176)
+scale = Vector2(0.782609, 0.503541)
 texture = ExtResource("1_0at7p")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = 63.0
+offset_bottom = 170.0
 text = "Blessings of life"
+label_settings = SubResource("LabelSettings_16ct3")
 
-[node name="Label2" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "พรแห่งชีวิตที่จะถูกหยิบยื่นให้แก่เจ้าในยามที่เจ้าถึงวาระสุดท้ายของชีวิตเพื่อโอกาสอีกครั้ง
-ได้รับกันตาย 1 ครั้ง"
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = 288.0
+offset_bottom = 341.0
+text = "พรแห่งชีวิตที่จะถูกหยิบยื่นให้แก่เจ้าในยามที่เจ้าถึง
+วาระสุดท้ายของชีวิเพื่อโอกาสอีกครั้ง
+
+[ได้รับกันตาย 1 ครั้ง]"
+label_settings = SubResource("LabelSettings_xlhsn")
