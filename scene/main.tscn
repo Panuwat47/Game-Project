@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0si0b2v6041q"]
+[gd_scene load_steps=11 format=3 uid="uid://c0si0b2v6041q"]
 
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
-[ext_resource type="PackedScene" uid="uid://b5udq1tsjvfwn" path="res://scene/cardui.tscn" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://b5udq1tsjvfwn" path="res://scene/CardUI.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://tjm0npo5t022" path="res://scripts/hand.gd" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://ce00hqw03mxic" path="res://scene/card_target_selector/card_target_selector.tscn" id="3_p1hux"]
+[ext_resource type="Resource" uid="uid://iwid61gm3du1" path="res://card/single_attack.tres" id="4_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://scene/player.tscn" id="4_b5f6u"]
+[ext_resource type="Resource" uid="uid://dtytuwaytdn2d" path="res://card/block.tres" id="5_p1hux"]
+[ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://scene/monster/monster1.tscn" id="6_of57s"]
+[ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(1600, 623)
@@ -12,12 +18,29 @@ size = Vector2(1600, 623)
 [node name="Game" type="Node" parent="."]
 script = ExtResource("1_wp4xf")
 
+[node name="level1" parent="." instance=ExtResource("8_of57s")]
+z_index = -1
+texture_filter = 1
+position = Vector2(794, 245.335)
+scale = Vector2(1.71137, 1.71137)
+
 [node name="carddropare" type="Area2D" parent="."]
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="carddropare"]
 position = Vector2(800, 311.5)
 shape = SubResource("RectangleShape2D_wp4xf")
+debug_color = Color(0, 0.6, 0.701961, 0.364706)
+
+[node name="enemy" parent="." instance=ExtResource("6_of57s")]
+position = Vector2(1217, 520)
+scale = Vector2(2.45971, 2.45971)
+
+[node name="Player" parent="." instance=ExtResource("4_b5f6u")]
+position = Vector2(226, 503)
+scale = Vector2(1.61602, 1.61602)
+
+[node name="CardTargetSelector" parent="." instance=ExtResource("3_p1hux")]
 
 [node name="battleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 
@@ -27,20 +50,23 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -800.0
-offset_top = -252.185
-offset_right = 800.0
-offset_bottom = -2.185
+offset_left = -229.0
+offset_top = -252.53
+offset_right = 229.0
+offset_bottom = -2.53003
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 script = ExtResource("2_wp4xf")
 
-[node name="cardui" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
+[node name="CardUI" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
 layout_mode = 2
+card = ExtResource("4_4j5ol")
 
-[node name="cardui2" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
+[node name="CardUI2" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
 layout_mode = 2
+card = ExtResource("4_4j5ol")
 
-[node name="cardui3" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
+[node name="CardUI3" parent="battleUI/hand" instance=ExtResource("2_v0l8b")]
 layout_mode = 2
+card = ExtResource("5_p1hux")

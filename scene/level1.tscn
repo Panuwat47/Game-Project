@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfih0lou13t2e"]
+
+[ext_resource type="Texture2D" uid="uid://bnb5n7t4e80i5" path="res://assets/Background/Google_AI_Studio_2025-08-24T15_30_53.808Z.png" id="1_cknwn"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(798, 451)
+scale = Vector2(1.2024, 1.2024)
+texture = ExtResource("1_cknwn")

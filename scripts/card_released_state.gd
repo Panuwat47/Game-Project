@@ -1,4 +1,4 @@
-extends cardstate
+extends CardState
 
 var played: bool
 
@@ -16,4 +16,4 @@ func on_input(_event: InputEvent) -> void:
 	if played:
 		return
 
-	transition_requested.emit(self, cardstate.State.BASE)
+	transition_requested.emit(self, CardState.State.BASE)

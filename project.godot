@@ -15,6 +15,10 @@ run/main_scene="uid://c0si0b2v6041q"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://b12nejdv8dwpg"
 
+[autoload]
+
+Events="*res://scripts/global/events.gd"
+
 [display]
 
 window/size/viewport_width=1600
@@ -45,6 +49,7 @@ right_mouse={
 
 2d_physics/layer_1="caed_target_selector"
 2d_physics/layer_2="card_drop_area"
+2d_physics/layer_3="enemies"
 
 [rendering]
 

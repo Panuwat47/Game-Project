@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbjvegdtta4q"
-path="res://.godot/imported/536297566_1307527944067527_6859867090996517156_n-removebg-preview.png-30580bd5816a60ce310d8891e5b4dd31.ctex"
+uid="uid://baqhuv421kw8l"
+path="res://.godot/imported/six sided die (1).png-77bdf0a904e1b6e5a6b41614131f22d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/536297566_1307527944067527_6859867090996517156_n-removebg-preview.png"
-dest_files=["res://.godot/imported/536297566_1307527944067527_6859867090996517156_n-removebg-preview.png-30580bd5816a60ce310d8891e5b4dd31.ctex"]
+source_file="res://assets/dice/six sided die (1).png"
+dest_files=["res://.godot/imported/six sided die (1).png-77bdf0a904e1b6e5a6b41614131f22d9.ctex"]
 
 [params]
 
