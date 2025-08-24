@@ -1,22 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyffifrts4ynr"]
+[gd_scene load_steps=6 format=3 uid="uid://dyffifrts4ynr"]
 
+[ext_resource type="Texture2D" uid="uid://dreh8lei51say" path="res://assets/card/IMG_2122.PNG" id="1_beesa"]
 [ext_resource type="Texture2D" uid="uid://bxl35pwop5vja" path="res://assets/card/pixel_art_large (5).png" id="1_yd1hm"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_ymjw2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qu0mj"]
+font = ExtResource("3_ymjw2")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ffir"]
+font = ExtResource("3_ymjw2")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="protect" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112.313, 448)
-scale = Vector2(0.200336, 0.206563)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_beesa")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0.312645, -144)
+scale = Vector2(0.516031, 0.378698)
 texture = ExtResource("1_yd1hm")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = 156.0
+offset_bottom = 169.0
 text = "Blessing of Protection"
+label_settings = SubResource("LabelSettings_qu0mj")
 
-[node name="Label2" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "พรที่จะมอบเกราะป้องกันที่จะคุ้มครองเจ้าในยามที่ความชั่วร้ายมุ่งหาเจ้า
-ได้รับโล่ป้องกัน"
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 208.0
+offset_right = 239.0
+offset_bottom = 340.0
+text = "พรที่จะมอบเกราะป้องกันที่จะคุ้มครองเจ้าในยามที่ความ
+ชั่วร้ายมุ่งหาเจ้า
+
+[ได้รับโล่ป้องกัน]"
+label_settings = SubResource("LabelSettings_7ffir")

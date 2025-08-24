@@ -1,22 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccns70qlhvcod"]
+[gd_scene load_steps=6 format=3 uid="uid://ccns70qlhvcod"]
 
 [ext_resource type="Texture2D" uid="uid://b8td63rh50pnr" path="res://assets/card/pixel_art_large (4).png" id="1_2lm4x"]
+[ext_resource type="Texture2D" uid="uid://b4kxbkp8a5do" path="res://assets/card/IMG_2123.PNG" id="1_tb6hg"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_ug1oa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_po2ie"]
+font = ExtResource("3_ug1oa")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hppe3"]
+font = ExtResource("3_ug1oa")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="atk_card" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.186667, 0.18506)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tb6hg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -192)
+scale = Vector2(0.48, 0.27759)
 texture = ExtResource("1_2lm4x")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -12.0
+offset_bottom = 169.0
 text = "Single attack"
+label_settings = SubResource("LabelSettings_po2ie")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 39.0
-offset_right = 102.0
-offset_bottom = 62.0
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = -156.0
+offset_bottom = 215.0
 text = "โจมตีเป้าหมาย"
+label_settings = SubResource("LabelSettings_hppe3")

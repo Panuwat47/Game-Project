@@ -1,24 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6nrokrsa0ltp"]
+[gd_scene load_steps=6 format=3 uid="uid://c6nrokrsa0ltp"]
 
+[ext_resource type="Texture2D" uid="uid://b4kxbkp8a5do" path="res://assets/card/IMG_2123.PNG" id="1_lmw0u"]
 [ext_resource type="Texture2D" uid="uid://d20ujxv3w4ej8" path="res://assets/card/pixel_art_large (8).png" id="1_whc4b"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_f4u12"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1gbc"]
+font = ExtResource("3_f4u12")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_imrdw"]
+font = ExtResource("3_f4u12")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="heal_card" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.304348, 0.347826)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lmw0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -192)
+scale = Vector2(0.782609, 0.521739)
 texture = ExtResource("1_whc4b")
 
-[node name="Label" type="Label" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -181.0
+offset_bottom = 169.0
 text = "Heal"
+label_settings = SubResource("LabelSettings_e1gbc")
 
-[node name="Label2" type="Label" parent="."]
-visible = false
-offset_left = 1.0
-offset_top = 45.0
-offset_right = 41.0
-offset_bottom = 68.0
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = -160.0
+offset_bottom = 226.0
 text = "ฟื้นฟูเลือด"
+label_settings = SubResource("LabelSettings_imrdw")

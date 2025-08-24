@@ -1,22 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtn51d8ll5bos"]
+[gd_scene load_steps=6 format=3 uid="uid://dtn51d8ll5bos"]
 
+[ext_resource type="Texture2D" uid="uid://dreh8lei51say" path="res://assets/card/IMG_2122.PNG" id="1_snye5"]
 [ext_resource type="Texture2D" uid="uid://d00dx4p765lxf" path="res://assets/card/pixel_art_large.png" id="1_wjd2g"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_begpq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ro4ct"]
+font = ExtResource("3_begpq")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q66dt"]
+font = ExtResource("3_begpq")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="up_damage" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.207407, 0.2)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_snye5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(7.62939e-06, -168)
+scale = Vector2(0.533333, 0.341667)
 texture = ExtResource("1_wjd2g")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = 119.0
+offset_bottom = 169.0
 text = "Blessing of Strength"
+label_settings = SubResource("LabelSettings_ro4ct")
 
-[node name="Label2" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "พรแห่งความแข็งแกร่งพรที่จะมอบความแข็งแกร่งแก่ผู้ที่ยืนยัดแก่ความตาย
-ได้รับพลังโจมตีเพิ่มขึ้น"
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = 238.0
+offset_bottom = 241.0
+text = "พรแห่งความแข็งแกร่งพรที่จะมอบความแข็งแกร่งแก่ผู้ที่
+ยืนยัดแก่ความตาย
+
+[ได้รับพลังโจมตีเพิ่มขึ้น]"
+label_settings = SubResource("LabelSettings_q66dt")

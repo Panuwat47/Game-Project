@@ -1,22 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5ds4mgy8umsw"]
+[gd_scene load_steps=6 format=3 uid="uid://b5ds4mgy8umsw"]
 
 [ext_resource type="Texture2D" uid="uid://cyth23iyvjnlw" path="res://assets/card/pixel_art_large (10).png" id="1_6stfu"]
+[ext_resource type="Texture2D" uid="uid://b4kxbkp8a5do" path="res://assets/card/IMG_2123.PNG" id="1_dibus"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_4maep"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5doc"]
+font = ExtResource("3_4maep")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cgrgk"]
+font = ExtResource("3_4maep")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="double_dice_card" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 448)
-scale = Vector2(0.304348, 0.29313)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 448)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dibus")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(0, -152)
+scale = Vector2(0.782609, 0.525191)
 texture = ExtResource("1_6stfu")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -164.0
+offset_bottom = 151.0
 text = "Double dice"
+label_settings = SubResource("LabelSettings_c5doc")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = -1.0
-offset_top = 32.0
-offset_right = 91.0
-offset_bottom = 55.0
+[node name="Label2" type="Label" parent="Sprite2D2"]
+offset_left = -256.0
+offset_top = 192.0
+offset_right = -41.0
+offset_bottom = 226.0
 text = "ได้รับการทอยลูกเต๋า X2"
+label_settings = SubResource("LabelSettings_cgrgk")
