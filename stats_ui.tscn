@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://34sly48uquh1"]
+
+[ext_resource type="Texture2D" uid="uid://mqjd1fqxkg2g" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa664.png" id="1_h18qs"]
+
+[node name="StatsUI" type="HBoxContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_right = 75.465
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Block" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="BlockImage" type="TextureRect" parent="Block"]
+layout_mode = 2
+texture = ExtResource("1_h18qs")
+
+[node name="BlockLabel" type="Label" parent="Block"]
+layout_mode = 2
+
+[node name="Health" type="HBoxContainer" parent="."]
+layout_mode = 2

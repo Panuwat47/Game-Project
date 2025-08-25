@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=3 format=3 uid="uid://bwald6ivlc2r8"]
+
+[ext_resource type="Script" uid="uid://cgd7buawui1ba" path="res://scripts/custom_resources/stats.gd" id="1_a82qx"]
+[ext_resource type="Texture2D" uid="uid://bh8kgm2supgjg" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede.png" id="1_btx6k"]
+
+[resource]
+script = ExtResource("1_a82qx")
+max_health = 10
+art = ExtResource("1_btx6k")
+metadata/_custom_type_script = "uid://cgd7buawui1ba"
