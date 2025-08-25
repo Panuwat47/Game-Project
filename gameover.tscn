@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://byds57omwym1t"]
+
+[ext_resource type="Texture2D" uid="uid://b1bj4ixalfkfj" path="res://MainMenu/Lost.png" id="1_eeur3"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="2_kctv7"]
+[ext_resource type="FontFile" uid="uid://k7jjook2qjnn" path="res://fonts/pslcd3310/PSLCD3310.ttf" id="3_2nw6q"]
+
+[sub_resource type="Theme" id="Theme_w3x71"]
+default_font = ExtResource("3_2nw6q")
+default_font_size = 62
+
+[sub_resource type="Theme" id="Theme_af4fq"]
+default_font = ExtResource("3_2nw6q")
+default_font_size = 55
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -140.0
+offset_right = 1955.0
+offset_bottom = 1054.0
+texture = ExtResource("1_eeur3")
+
+[node name="Gameover" type="Label" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 142.0
+offset_right = 1052.0
+offset_bottom = 242.0
+theme_override_fonts/font = ExtResource("2_kctv7")
+theme_override_font_sizes/font_size = 125
+text = "GAME OVER!"
+
+[node name="restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 371.0
+offset_right = 932.0
+offset_bottom = 469.0
+theme = SubResource("Theme_w3x71")
+text = "RESTART"
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 593.0
+theme = SubResource("Theme_af4fq")
+text = "MAINMENU"

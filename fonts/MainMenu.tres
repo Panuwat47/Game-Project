@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bjb6434kmaqi5"]
+
+[ext_resource type="FontFile" uid="uid://k7jjook2qjnn" path="res://fonts/pslcd3310/PSLCD3310.ttf" id="1_b0tex"]
+
+[resource]
+default_font = ExtResource("1_b0tex")

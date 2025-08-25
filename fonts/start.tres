@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cllihrqr1j8pd"]
+
+[ext_resource type="FontFile" uid="uid://k7jjook2qjnn" path="res://fonts/pslcd3310/PSLCD3310.ttf" id="1_kqbrb"]
+
+[resource]
+default_font = ExtResource("1_kqbrb")
+default_font_size = 5
