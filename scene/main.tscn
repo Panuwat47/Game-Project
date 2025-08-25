@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0si0b2v6041q"]
 
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
-[ext_resource type="PackedScene" uid="uid://b5udq1tsjvfwn" path="res://scene/CardUI.tscn" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://cemwykyxlsvd6" path="res://scene/CardUI.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://tjm0npo5t022" path="res://scripts/hand.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://ce00hqw03mxic" path="res://scene/card_target_selector/card_target_selector.tscn" id="3_p1hux"]
-[ext_resource type="Resource" uid="uid://iwid61gm3du1" path="res://card/single_attack.tres" id="4_4j5ol"]
-[ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://scene/player.tscn" id="4_b5f6u"]
-[ext_resource type="Resource" uid="uid://dtytuwaytdn2d" path="res://card/block.tres" id="5_p1hux"]
-[ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://scene/monster/monster1.tscn" id="6_of57s"]
+[ext_resource type="Resource" uid="uid://iwid61gm3du1" path="res://resource/card_resource/single_attack.tres" id="4_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://resource/player_resource/player.tscn" id="4_b5f6u"]
+[ext_resource type="Resource" uid="uid://dtytuwaytdn2d" path="res://resource/card_resource/block.tres" id="5_p1hux"]
+[ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://monster/monster1/monster1.tscn" id="6_of57s"]
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]

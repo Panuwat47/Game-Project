@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=4 format=3 uid="uid://qnmslf1h4v02"]
+
+[ext_resource type="Script" uid="uid://d01eu7r7hb8iy" path="res://scripts/custom_resources/character_stats.gd" id="1_ao5co"]
+[ext_resource type="Texture2D" uid="uid://coyc84hyee1k5" path="res://assets/monster/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Idle/Bringer-of-Death_Idle_1.png" id="1_r62m2"]
+[ext_resource type="Resource" uid="uid://dim5vyti03cp3" path="res://resource/player_resource/starting_deck.tres" id="3_t3mhd"]
+
+[resource]
+script = ExtResource("1_ao5co")
+starting_deck = ExtResource("3_t3mhd")
+cards_per_turn = 3
+max_mana = 3
+max_health = 10
+art = ExtResource("1_r62m2")
+metadata/_custom_type_script = "uid://d01eu7r7hb8iy"
