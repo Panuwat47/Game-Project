@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0si0b2v6041q"]
+[gd_scene load_steps=12 format=3 uid="uid://c0si0b2v6041q"]
 
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cemwykyxlsvd6" path="res://scene/CardUI.tscn" id="2_v0l8b"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ce00hqw03mxic" path="res://scene/card_target_selector/card_target_selector.tscn" id="3_p1hux"]
 [ext_resource type="Resource" uid="uid://iwid61gm3du1" path="res://resource/card_resource/single_attack.tres" id="4_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://resource/player_resource/player.tscn" id="4_b5f6u"]
-[ext_resource type="Resource" uid="uid://bwald6ivlc2r8" path="res://monster/monster1/monster.tres" id="4_k65ib"]
 [ext_resource type="Resource" uid="uid://dtytuwaytdn2d" path="res://resource/card_resource/block.tres" id="5_p1hux"]
 [ext_resource type="Resource" uid="uid://qnmslf1h4v02" path="res://resource/player_resource/player.tres" id="5_tqoya"]
 [ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://monster/monster1/monster1.tscn" id="6_of57s"]
@@ -21,6 +20,7 @@ size = Vector2(1600, 623)
 script = ExtResource("1_wp4xf")
 
 [node name="level1" parent="." instance=ExtResource("8_of57s")]
+visible = false
 z_index = -2
 texture_filter = 1
 position = Vector2(794, 245.335)
@@ -37,7 +37,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.364706)
 [node name="enemy" parent="." instance=ExtResource("6_of57s")]
 position = Vector2(1224, 461)
 scale = Vector2(2.45971, 2.45971)
-stats = ExtResource("4_k65ib")
 
 [node name="Player" parent="." instance=ExtResource("4_b5f6u")]
 z_index = 1
