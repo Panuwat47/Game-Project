@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bfmwk2xm77yow"]
 
-[ext_resource type="Script" uid="uid://baxtl5yvuwt3d" path="res://scripts/player.gd" id="1_hjaqi"]
+[ext_resource type="Script" uid="uid://baxtl5yvuwt3d" path="res://scripts/player2.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://csqtphfntipho" path="res://assets/generic_char_v0.2/png/blue/char_blue_1.png" id="2_hjaqi"]
 [ext_resource type="PackedScene" uid="uid://34sly48uquh1" path="res://scene/stats_ui.tscn" id="3_f2xda"]
 
@@ -340,8 +340,7 @@ hframes = 8
 vframes = 9
 
 [node name="StatsUI" parent="." instance=ExtResource("3_f2xda")]
-offset_left = -143.0
-offset_top = 98.0
-offset_right = 57.0
-offset_bottom = 124.0
-scale = Vector2(1.355, 1.355)
+offset_left = -112.0
+offset_top = 82.0
+offset_right = 88.0
+offset_bottom = 108.0

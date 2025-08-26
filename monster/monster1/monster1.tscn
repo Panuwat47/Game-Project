@@ -1,9 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://blbos0eexrqok"]
+[gd_scene load_steps=27 format=3 uid="uid://blbos0eexrqok"]
 
 [ext_resource type="Texture2D" uid="uid://c0d5ubj7l2il0" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede_attack2.png" id="1_b1h1f"]
+[ext_resource type="Script" uid="uid://b20olgjjsi2dn" path="res://monster/monster1/monster_1.gd" id="1_h0cs6"]
 [ext_resource type="Texture2D" uid="uid://d1tjuqotwq16m" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede_death.png" id="2_hqr73"]
+[ext_resource type="Texture2D" uid="uid://bh8kgm2supgjg" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede.png" id="2_u6kwc"]
 [ext_resource type="Texture2D" uid="uid://b00fxrak1j3gm" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede_hurt.png" id="3_uidho"]
 [ext_resource type="Texture2D" uid="uid://c2n1daf2tv5ln" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede_idle.png" id="4_rev4i"]
+[ext_resource type="PackedScene" uid="uid://34sly48uquh1" path="res://scene/stats_ui.tscn" id="6_h0cs6"]
+[ext_resource type="Texture2D" uid="uid://0v4kx3akr37r" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa721.png" id="6_u6kwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5te2"]
 size = Vector2(61, 36)
@@ -143,8 +147,9 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Area2D" type="Area2D"]
+[node name="enemy" type="Area2D" groups=["enemies"]]
 collision_layer = 4
+script = ExtResource("1_h0cs6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.5, 18)
@@ -152,5 +157,21 @@ shape = SubResource("RectangleShape2D_p5te2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2y26c")
-animation = &"attack"
-frame_progress = 0.327961
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(56, 19)
+texture = ExtResource("6_u6kwc")
+
+[node name="StatsUI" parent="." instance=ExtResource("6_h0cs6")]
+offset_top = 37.0
+offset_bottom = 63.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_u6kwc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

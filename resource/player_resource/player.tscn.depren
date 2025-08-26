@@ -340,8 +340,7 @@ hframes = 8
 vframes = 9
 
 [node name="StatsUI" parent="." instance=ExtResource("3_f2xda")]
-offset_left = -143.0
-offset_top = 98.0
-offset_right = 57.0
-offset_bottom = 124.0
-scale = Vector2(1.355, 1.355)
+offset_left = -112.0
+offset_top = 82.0
+offset_right = 88.0
+offset_bottom = 108.0

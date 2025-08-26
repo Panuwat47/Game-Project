@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://34sly48uquh1"]
+
+[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://main_theme.tres" id="1_8pgs7"]
+[ext_resource type="Texture2D" uid="uid://mqjd1fqxkg2g" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa664.png" id="2_d6b3s"]
+[ext_resource type="Script" uid="uid://ba6vaja2av25v" path="res://scripts/stats_ui.gd" id="2_ybhgt"]
+[ext_resource type="Texture2D" uid="uid://h6akjtm1o2d" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa659.png" id="3_ybhgt"]
+
+[node name="StatsUI" type="HBoxContainer"]
+anchors_preset = -1
+anchor_left = 0.485
+anchor_right = 0.485
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme = ExtResource("1_8pgs7")
+alignment = 1
+script = ExtResource("2_ybhgt")
+
+[node name="Block" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="BlockImage" type="TextureRect" parent="Block"]
+layout_mode = 2
+texture = ExtResource("2_d6b3s")
+stretch_mode = 5
+
+[node name="BlockLabel" type="Label" parent="Block"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HealthImage" type="TextureRect" parent="Health"]
+layout_mode = 2
+texture = ExtResource("3_ybhgt")
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="Health"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
