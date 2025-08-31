@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dtytuwaytdn2d"]
+
+[ext_resource type="Texture2D" uid="uid://sobjjgrf4ot6" path="res://assets/card/pixel_art_large (2).png" id="1_m1w4e"]
+[ext_resource type="Script" uid="uid://bih8p2i1oerjv" path="res://player/card_resource/block.gd" id="3_fjstf"]
+
+[resource]
+script = ExtResource("3_fjstf")
+id = "block"
+type = 1
+target = 0
+cost = 3
+icon = ExtResource("1_m1w4e")
+tooltip_text = "มอบพลังป้องกันให้แก่ตัวเอง[color=\"blue\"] 5 [/color]หน่วย"
+metadata/_custom_type_script = "uid://bq3oj1t643qo4"
