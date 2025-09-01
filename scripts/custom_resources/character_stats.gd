@@ -20,11 +20,11 @@ func reset_mana() -> void:
 	self.mana = max_mana
 
 
-#func take_damage(damage: int) -> void:
-	#var initial_health := health
-	#super.take_damage(damage)
-	#if initial_health > health:
-		#Events.player_hit.emit()
+func take_damage(damage: int) -> void:
+	var initial_health := health
+	super.take_damage(damage)
+	if initial_health > health:
+		Events.player_hit.emit()
 
 
 func can_play_card(card: Card) -> bool:

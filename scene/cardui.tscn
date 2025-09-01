@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://84lj7xqp70op"]
+[gd_scene load_steps=13 format=3 uid="uid://84lj7xqp70op"]
 
 [ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://main_theme.tres" id="1_ev7nr"]
 [ext_resource type="Script" uid="uid://bn3ty48tehq68" path="res://scripts/cardui.gd" id="2_26c5q"]
 [ext_resource type="StyleBox" uid="uid://bqwhnhyy6qrhq" path="res://card_hover_style.tres" id="3_gu2up"]
 [ext_resource type="Script" uid="uid://bjoduiggnyfko" path="res://scripts/card_state_machine.gd" id="3_r3oav"]
 [ext_resource type="Script" uid="uid://1pt6jj6aqsfd" path="res://scripts/card_base_state.gd" id="4_3jl2n"]
+[ext_resource type="FontFile" uid="uid://chg2124f7qxv3" path="res://fonts/TAChaiLai_Pixelforpersonal/TAChaiLai_Pixelforpersonal/TA ChaiLai_Pixel For Personal user.ttf" id="4_gu2up"]
 [ext_resource type="Texture2D" uid="uid://b8td63rh50pnr" path="res://assets/card/pixel_art_large (4).png" id="4_i87p0"]
 [ext_resource type="Script" uid="uid://dxar8uov0smgh" path="res://scripts/card_click_state.gd" id="5_veitp"]
 [ext_resource type="Script" uid="uid://dx6m0fwb30f5j" path="res://scripts/card_dragging_state.gd" id="6_x6vvd"]
@@ -50,6 +51,9 @@ offset_left = 8.95725
 offset_top = 1.7094
 offset_right = 36.9572
 offset_bottom = 27.7094
+theme = ExtResource("1_ev7nr")
+theme_override_fonts/font = ExtResource("4_gu2up")
+theme_override_font_sizes/font_size = 24
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1

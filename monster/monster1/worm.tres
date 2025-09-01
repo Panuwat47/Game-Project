@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://bxbju4rqktbqx"]
+
+[ext_resource type="PackedScene" uid="uid://brkrutn3a306" path="res://monster/monster1/worm_enemy_ai.tscn" id="1_phvh6"]
+[ext_resource type="Texture2D" uid="uid://bh8kgm2supgjg" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/1 Centipede/Centipede.png" id="1_ryqxl"]
+[ext_resource type="Script" uid="uid://d2g5yc5nbqg7g" path="res://scripts/custom_resources/enemy_stats.gd" id="1_vmmbl"]
+
+[resource]
+script = ExtResource("1_vmmbl")
+ai = ExtResource("1_phvh6")
+max_health = 10
+art = ExtResource("1_ryqxl")
+metadata/_custom_type_script = "uid://d2g5yc5nbqg7g"

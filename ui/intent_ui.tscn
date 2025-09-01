@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4krfsqg6xvic"]
+
+[ext_resource type="Texture2D" uid="uid://brg46quik83il" path="res://assets/Free - Raven Fantasy Icons/Separated Files/32x32/fb671.png" id="1_22rn3"]
+[ext_resource type="Script" uid="uid://bqpyyr0ijc5fh" path="res://ui/intent_ui.gd" id="1_yuok8"]
+[ext_resource type="FontFile" uid="uid://bn1xfcj1l85ft" path="res://fonts/monogram/ttf/monogram-extended.ttf" id="2_yuok8"]
+
+[node name="IntentUI" type="HBoxContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_right = 49.0
+offset_bottom = 70.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("1_yuok8")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("1_22rn3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Number" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_yuok8")
+theme_override_font_sizes/font_size = 64
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1

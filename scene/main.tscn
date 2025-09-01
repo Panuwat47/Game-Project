@@ -1,23 +1,36 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0si0b2v6041q"]
+[gd_scene load_steps=19 format=3 uid="uid://c0si0b2v6041q"]
 
 [ext_resource type="Script" uid="uid://dju6wah07bc6b" path="res://scene/main.gd" id="1_jcbur"]
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://tjm0npo5t022" path="res://scripts/hand.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://ce00hqw03mxic" path="res://scene/card_target_selector/card_target_selector.tscn" id="3_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://player/player.tscn" id="4_b5f6u"]
-[ext_resource type="Resource" uid="uid://bwald6ivlc2r8" path="res://monster/monster1/monster.tres" id="4_k65ib"]
+[ext_resource type="Script" uid="uid://d0j2o37u8fvkw" path="res://monster/enemy_script/enemy_handler.gd" id="5_jcbur"]
 [ext_resource type="Resource" uid="uid://qnmslf1h4v02" path="res://player/player.tres" id="5_tqoya"]
 [ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://monster/monster1/monster1.tscn" id="6_of57s"]
+[ext_resource type="Resource" uid="uid://bxbju4rqktbqx" path="res://monster/monster1/worm.tres" id="6_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 [ext_resource type="Script" uid="uid://4rik44eyxdyu" path="res://scripts/battle_ui.gd" id="8_v2gmf"]
 [ext_resource type="Script" uid="uid://fbstc00eoqbf" path="res://player/player_handler.gd" id="9_hybxs"]
 [ext_resource type="PackedScene" uid="uid://dsj2l2j31biep" path="res://ui/mana_ui.tscn" id="12_mswub"]
-[ext_resource type="StyleBox" uid="uid://dc6qvymxosmbx" path="res://mana_style.tres" id="13_hybxs"]
 [ext_resource type="PackedScene" uid="uid://yqepflqpt2tj" path="res://ui/tooltip.tscn" id="14_hybxs"]
 [ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://main_theme.tres" id="15_v2gmf"]
+[ext_resource type="Script" uid="uid://chlac7yrr2han" path="res://scripts/ui_script/red_flash.gd" id="16_jcbur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(1600, 682)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2gmf"]
+bg_color = Color(0, 0.709804, 0.960784, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.639216, 0.8, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_jcbur")
@@ -40,10 +53,13 @@ position = Vector2(800, 341)
 shape = SubResource("RectangleShape2D_wp4xf")
 debug_color = Color(0, 0.6, 0.701961, 0.364706)
 
-[node name="enemy" parent="." instance=ExtResource("6_of57s")]
+[node name="EnemyHandler" type="Node2D" parent="."]
+script = ExtResource("5_jcbur")
+
+[node name="enemy" parent="EnemyHandler" instance=ExtResource("6_of57s")]
 position = Vector2(1224, 579)
 scale = Vector2(2.45971, 2.45971)
-stats = ExtResource("4_k65ib")
+stats = ExtResource("6_v2gmf")
 
 [node name="Player" parent="." instance=ExtResource("4_b5f6u")]
 z_index = 1
@@ -79,12 +95,13 @@ alignment = 1
 script = ExtResource("2_wp4xf")
 
 [node name="ManaUI" parent="battleUI" instance=ExtResource("12_mswub")]
+texture_filter = 1
 offset_left = 79.0
 offset_top = -116.0
 offset_right = 154.0
 offset_bottom = -41.0
 theme = null
-theme_override_styles/panel = ExtResource("13_hybxs")
+theme_override_styles/panel = SubResource("StyleBoxFlat_v2gmf")
 char_stats = ExtResource("5_tqoya")
 
 [node name="Tooltip" parent="battleUI" instance=ExtResource("14_hybxs")]
@@ -106,3 +123,20 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("15_v2gmf")
 text = "End This Turn"
+
+[node name="RedFlash" type="CanvasLayer" parent="."]
+layer = 2
+script = ExtResource("16_jcbur")
+
+[node name="ColorRect" type="ColorRect" parent="RedFlash"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
+
+[node name="Timer" type="Timer" parent="RedFlash"]
+wait_time = 0.1
+one_shot = true
