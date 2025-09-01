@@ -18,6 +18,7 @@ config/icon="uid://bcp3isthou8uo"
 [autoload]
 
 Events="*res://scripts/global/events.gd"
+Shaker="*res://scripts/global/shaker.gd"
 
 [display]
 
@@ -26,7 +27,7 @@ window/size/viewport_height=900
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ai_coding_assistant/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 
