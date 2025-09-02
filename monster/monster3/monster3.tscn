@@ -1,9 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://6gig0v74mrns"]
+[gd_scene load_steps=25 format=3 uid="uid://6gig0v74mrns"]
 
 [ext_resource type="Texture2D" uid="uid://baxk5y4sxfauu" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_attack.png" id="1_1bmtn"]
 [ext_resource type="Texture2D" uid="uid://g8egf22i0utb" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_death.png" id="2_xihbb"]
 [ext_resource type="Texture2D" uid="uid://di7w7nyd47i6u" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_hurt.png" id="3_7j4ki"]
 [ext_resource type="Texture2D" uid="uid://b8ybkkbdq1p3a" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio_idle.png" id="4_s7bhp"]
+[ext_resource type="Texture2D" uid="uid://0v4kx3akr37r" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa721.png" id="5_a670i"]
+[ext_resource type="PackedScene" uid="uid://34sly48uquh1" path="res://scene/stats_ui.tscn" id="6_xa5lq"]
+[ext_resource type="Texture2D" uid="uid://cv2x7okp0ofa4" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio.png" id="7_a670i"]
+[ext_resource type="PackedScene" uid="uid://b4krfsqg6xvic" path="res://ui/intent_ui.tscn" id="8_oa4f6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_03fhw"]
 atlas = ExtResource("1_1bmtn")
@@ -76,7 +80,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d4kjp")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -93,7 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4emhs")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -127,15 +131,36 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5c1n"]
-size = Vector2(32, 24)
+size = Vector2(54, 37)
 
 [node name="Area2D" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, -9)
+scale = Vector2(1.44792, 1.42338)
 sprite_frames = SubResource("SpriteFrames_chcm1")
 animation = &"death"
-frame_progress = 0.0468118
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 12)
+position = Vector2(1, 9.5)
 shape = SubResource("RectangleShape2D_h5c1n")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(56, 19)
+texture = ExtResource("5_a670i")
+
+[node name="StatsUI" parent="." instance=ExtResource("6_xa5lq")]
+offset_top = 37.0
+offset_bottom = 63.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_a670i")
+
+[node name="IntentUI" parent="." instance=ExtResource("8_oa4f6")]
+offset_left = -9.0
+offset_top = -43.0
+offset_right = 89.0
+offset_bottom = 27.0
+scale = Vector2(0.297093, 0.297093)
