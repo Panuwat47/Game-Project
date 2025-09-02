@@ -1,0 +1,41 @@
+[gd_scene load_steps=11 format=3 uid="uid://m8abbv8d440n"]
+
+[ext_resource type="Script" uid="uid://bvf6s1mkd7egl" path="res://monster/enemy_action_picker.gd" id="1_tjav4"]
+[ext_resource type="Script" uid="uid://dascipygqxto3" path="res://monster/monster3/monster_3_attack_action.gd" id="2_sepdl"]
+[ext_resource type="Texture2D" uid="uid://bjfmvd3oy1x8h" path="res://assets/Free - Raven Fantasy Icons/Separated Files/32x32/fb4.png" id="3_q60c7"]
+[ext_resource type="Script" uid="uid://bghow1a3n5peq" path="res://scripts/custom_resources/intent.gd" id="4_ft0vw"]
+[ext_resource type="AudioStream" uid="uid://bx57e6jn7vyty" path="res://sound/Monster_sound/Monster3_attact.wav" id="5_gbx5i"]
+[ext_resource type="Script" uid="uid://c2vvmethfda2h" path="res://monster/monster3/monster_3_block_action.gd" id="6_10rhy"]
+[ext_resource type="Texture2D" uid="uid://bsq7qfvlt8i84" path="res://assets/Free - Raven Fantasy Icons/Separated Files/32x32/fb664.png" id="7_ufit5"]
+[ext_resource type="AudioStream" uid="uid://br54nxd7rbeyd" path="res://sound/Player_sound/Player_armor.mp3" id="8_vugbe"]
+
+[sub_resource type="Resource" id="Resource_yfji8"]
+script = ExtResource("4_ft0vw")
+number = "10"
+icon = ExtResource("3_q60c7")
+metadata/_custom_type_script = "uid://bghow1a3n5peq"
+
+[sub_resource type="Resource" id="Resource_x0q1f"]
+script = ExtResource("4_ft0vw")
+number = ""
+icon = ExtResource("7_ufit5")
+metadata/_custom_type_script = "uid://bghow1a3n5peq"
+
+[node name="Monster_3AI" type="Node"]
+script = ExtResource("1_tjav4")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("2_sepdl")
+damage = 10
+intent = SubResource("Resource_yfji8")
+sound = ExtResource("5_gbx5i")
+type = 1
+chance_weight = 1.5
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("6_10rhy")
+block = 3
+intent = SubResource("Resource_x0q1f")
+sound = ExtResource("8_vugbe")
+type = 1
+chance_weight = 1.5
