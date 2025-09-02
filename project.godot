@@ -15,15 +15,25 @@ run/main_scene="uid://c0si0b2v6041q"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://bcp3isthou8uo"
 
+[audio]
+
+buses/default_bus_layout="res://sound/default_bus_layout.tres"
+
 [autoload]
 
 Events="*res://scripts/global/events.gd"
 Shaker="*res://scripts/global/shaker.gd"
+MusicPlayer="*res://sound/music_player.tscn"
+SFXPlayer="*res://sound/sfx_player.tscn"
 
 [display]
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+
+[editor]
+
+script/templates_search_path="res://scripts/templates"
 
 [editor_plugins]
 

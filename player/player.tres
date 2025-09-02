@@ -9,6 +9,6 @@ script = ExtResource("1_ao5co")
 starting_deck = ExtResource("3_t3mhd")
 cards_per_turn = 3
 max_mana = 6
-max_health = 10
+max_health = 30
 art = ExtResource("1_r62m2")
 metadata/_custom_type_script = "uid://d01eu7r7hb8iy"

@@ -3,9 +3,10 @@ extends Control
 
 signal reparent_requested(which_card_ui: CardUI)
 
-const BASE_STYLEBOX := preload("res://card_base_style.tres")
-const DRAG_STYLEBOX := preload("res://card_dragging_style.tres")
-const HOVER_STYLEBOX := preload("res://card_hover_style.tres")
+const BASE_STYLEBOX = preload("res://Themes&Styles/card_base_style.tres")
+const DRAG_STYLEBOX = preload("res://Themes&Styles/card_dragging_style.tres")
+const HOVER_STYLEBOX = preload("res://Themes&Styles/card_hover_style.tres")
+
 
 @export var card: Card : set = _set_card
 @export var char_stats: CharacterStats : set = _set_char_stats
