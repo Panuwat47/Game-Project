@@ -1,20 +1,4 @@
-class_name Enemy
-extends Area2D
-
-const ARROW_OFFSET := 5
-const WHITE_SPRITE_MATERIAL = preload("res://assets/white_sprite_material.tres")
-
-@export var stats: EnemyStats : set = set_enemy_stats
-
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var arrow: Sprite2D = $Arrow
-@onready var stats_ui: StatsUI = $StatsUI
-@onready var intent_ui: IntentUI = $IntentUI
-
-
-var enemy_action_picker: EnemyActionPicker
-var current_action: EnemyAction : set = set_current_action
+extends Enemy
 
 func set_current_action(value: EnemyAction) -> void:
 	current_action = value
@@ -95,7 +79,7 @@ func take_damage(damage: int) -> void:
 			animated_sprite_2d.material = null
 			
 			if stats.health <= 0:
-				animated_sprite_2d.play("die")
+				animated_sprite_2d.play("death")
 				await  get_tree().create_timer(1.0).timeout
 				queue_free()
 	)

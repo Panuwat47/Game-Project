@@ -1,9 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://btumtdbsprloa"]
+[gd_scene load_steps=27 format=3 uid="uid://btumtdbsprloa"]
 
 [ext_resource type="Texture2D" uid="uid://ds4f856mrufpf" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/3 Big bloated/Big_bloated_attack4.png" id="1_vjlhh"]
 [ext_resource type="Texture2D" uid="uid://6ag3obsln2k5" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/3 Big bloated/Big_bloated_death.png" id="2_d3vva"]
 [ext_resource type="Texture2D" uid="uid://balft3u0jksgs" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/3 Big bloated/Big_bloated_hurt.png" id="3_f1oqh"]
 [ext_resource type="Texture2D" uid="uid://c0oi4sg2vhgng" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/3 Big bloated/Big_bloated_idle.png" id="4_4lmde"]
+[ext_resource type="Texture2D" uid="uid://0v4kx3akr37r" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa721.png" id="5_cd3ba"]
+[ext_resource type="PackedScene" uid="uid://34sly48uquh1" path="res://scene/stats_ui.tscn" id="6_uhj0c"]
+[ext_resource type="Texture2D" uid="uid://dxid4oujv45fw" path="res://assets/monster/craftpix-781167-free-swamp-bosses-pixel-art-character-pack/3 Big bloated/Big_bloated.png" id="7_4rg3v"]
+[ext_resource type="PackedScene" uid="uid://b4krfsqg6xvic" path="res://ui/intent_ui.tscn" id="8_tcwgw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpd5r"]
 atlas = ExtResource("1_vjlhh")
@@ -147,9 +151,27 @@ size = Vector2(41, 49)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6rosd")
-animation = &"attack"
-frame_progress = 0.38737
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 11.5)
 shape = SubResource("RectangleShape2D_lla4d")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(56, 19)
+texture = ExtResource("5_cd3ba")
+
+[node name="StatsUI" parent="." instance=ExtResource("6_uhj0c")]
+offset_top = 37.0
+offset_bottom = 63.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_4rg3v")
+
+[node name="IntentUI" parent="." instance=ExtResource("8_tcwgw")]
+offset_left = -9.0
+offset_top = -43.0
+offset_right = 89.0
+offset_bottom = 27.0
+scale = Vector2(0.297093, 0.297093)

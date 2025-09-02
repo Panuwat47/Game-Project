@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://brkrutn3a306"]
+[gd_scene load_steps=14 format=3 uid="uid://brkrutn3a306"]
 
 [ext_resource type="Script" uid="uid://bvf6s1mkd7egl" path="res://monster/enemy_action_picker.gd" id="1_axqc0"]
 [ext_resource type="Script" uid="uid://ckb1ej5uqr7xi" path="res://monster/monster1/worm_attack_action.gd" id="2_7bb8s"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://c76ctphh64krh" path="res://monster/monster1/worm_block_action.gd" id="3_paddo"]
 [ext_resource type="Script" uid="uid://br5ukvfipv3ui" path="res://monster/monster1/worm_mega_block_action.gd" id="4_x1yq3"]
 [ext_resource type="Script" uid="uid://bghow1a3n5peq" path="res://scripts/custom_resources/intent.gd" id="4_x4u3w"]
+[ext_resource type="AudioStream" uid="uid://62hbg6brl40m" path="res://sound/Monster_sound/Monser1_attact.wav" id="5_daju3"]
 [ext_resource type="Texture2D" uid="uid://bsq7qfvlt8i84" path="res://assets/Free - Raven Fantasy Icons/Separated Files/32x32/fb664.png" id="6_x7iif"]
+[ext_resource type="AudioStream" uid="uid://br54nxd7rbeyd" path="res://sound/Player_sound/Player_armor.mp3" id="8_fkn6w"]
 [ext_resource type="Texture2D" uid="uid://co4d73l38518l" path="res://assets/Free - Raven Fantasy Icons/Separated Files/32x32/fb665.png" id="8_x4u3w"]
 
 [sub_resource type="Resource" id="Resource_daju3"]
@@ -33,15 +35,18 @@ script = ExtResource("1_axqc0")
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_7bb8s")
 intent = SubResource("Resource_daju3")
+sound = ExtResource("5_daju3")
 type = 1
-chance_weight = 1.0
+chance_weight = 1.5
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_paddo")
 intent = SubResource("Resource_fkn6w")
+sound = ExtResource("8_fkn6w")
 type = 1
 chance_weight = 1.0
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_x1yq3")
 intent = SubResource("Resource_x7iif")
+sound = ExtResource("8_fkn6w")

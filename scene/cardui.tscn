@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://84lj7xqp70op"]
 
-[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://main_theme.tres" id="1_ev7nr"]
+[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="1_ev7nr"]
 [ext_resource type="Script" uid="uid://bn3ty48tehq68" path="res://scripts/cardui.gd" id="2_26c5q"]
-[ext_resource type="StyleBox" uid="uid://bqwhnhyy6qrhq" path="res://card_hover_style.tres" id="3_gu2up"]
+[ext_resource type="StyleBox" uid="uid://bqwhnhyy6qrhq" path="res://Themes&Styles/card_hover_style.tres" id="3_gu2up"]
 [ext_resource type="Script" uid="uid://bjoduiggnyfko" path="res://scripts/card_state_machine.gd" id="3_r3oav"]
 [ext_resource type="Script" uid="uid://1pt6jj6aqsfd" path="res://scripts/card_base_state.gd" id="4_3jl2n"]
 [ext_resource type="FontFile" uid="uid://chg2124f7qxv3" path="res://fonts/TAChaiLai_Pixelforpersonal/TAChaiLai_Pixelforpersonal/TA ChaiLai_Pixel For Personal user.ttf" id="4_gu2up"]

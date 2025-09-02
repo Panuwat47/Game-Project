@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsj2l2j31biep"]
 
-[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://main_theme.tres" id="1_xbsvn"]
+[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="1_xbsvn"]
 [ext_resource type="Script" uid="uid://ccltt5kmw71f6" path="res://ui/mana_ui.gd" id="2_tx2q8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tx2q8"]

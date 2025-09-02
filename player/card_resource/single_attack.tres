@@ -1,6 +1,7 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://iwid61gm3du1"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://iwid61gm3du1"]
 
 [ext_resource type="Texture2D" uid="uid://b8td63rh50pnr" path="res://assets/card/pixel_art_large (4).png" id="1_kqbg8"]
+[ext_resource type="AudioStream" uid="uid://cwxvhcofqn04b" path="res://sound/Player_sound/Player_attack.mp3" id="3_cwuov"]
 [ext_resource type="Script" uid="uid://c00iti0606ojo" path="res://player/card_resource/single_attack.gd" id="3_h3bbn"]
 
 [resource]
@@ -11,4 +12,5 @@ target = 1
 cost = 2
 icon = ExtResource("1_kqbg8")
 tooltip_text = "ทำ[color=\"ff0000\"] 6 [/color]ดาเมจให้แก่ศัตรู"
+sound = ExtResource("3_cwuov")
 metadata/_custom_type_script = "uid://bq3oj1t643qo4"
