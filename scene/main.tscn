@@ -1,4 +1,7 @@
+[gd_scene load_steps=21 format=3 uid="uid://c0si0b2v6041q"]
+
 [gd_scene load_steps=34 format=3 uid="uid://c0si0b2v6041q"]
+
 
 [ext_resource type="Script" uid="uid://dju6wah07bc6b" path="res://scene/main.gd" id="1_jcbur"]
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
@@ -12,11 +15,12 @@
 [ext_resource type="Resource" uid="uid://bxbju4rqktbqx" path="res://monster/monster1/worm.tres" id="6_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 [ext_resource type="Script" uid="uid://4rik44eyxdyu" path="res://scripts/battle_ui.gd" id="8_v2gmf"]
-[ext_resource type="PackedScene" uid="uid://btumtdbsprloa" path="res://monster/monster2/monster2.tscn" id="9_0vlqb"]
 [ext_resource type="Script" uid="uid://fbstc00eoqbf" path="res://player/player_handler.gd" id="9_hybxs"]
+
 [ext_resource type="Script" uid="uid://c1vmfbxaq47mq" path="res://monster/monster2/monster_2.gd" id="10_gjnwh"]
 [ext_resource type="Resource" uid="uid://dt038f73udmmr" path="res://monster/monster2/golem.tres" id="11_fdqew"]
 [ext_resource type="PackedScene" uid="uid://6gig0v74mrns" path="res://monster/monster3/monster3.tscn" id="12_gtqqq"]
+
 [ext_resource type="PackedScene" uid="uid://dsj2l2j31biep" path="res://ui/mana_ui.tscn" id="12_mswub"]
 [ext_resource type="Script" uid="uid://d2ikn5o4mxxtg" path="res://monster/monster3/monster_3.gd" id="13_gn2wi"]
 [ext_resource type="Resource" uid="uid://dli71attp0380" path="res://monster/monster3/monster_3.tres" id="14_gn2wi"]
@@ -74,6 +78,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.364706)
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("5_jcbur")
 
+
 [node name="boss" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("18_io27d")]
 position = Vector2(497, 363)
 scale = Vector2(3.815, 3.815)
@@ -87,6 +92,7 @@ scale = Vector2(2.55, 2.55)
 collision_layer = 4
 script = ExtResource("10_gjnwh")
 stats = ExtResource("11_fdqew")
+
 
 [node name="worm" parent="EnemyHandler" instance=ExtResource("6_of57s")]
 position = Vector2(1312, 586)
@@ -193,6 +199,7 @@ layer = 2
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_tv8i1")]
 visible = false
 
+
 [node name="tutorial" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="tutorial"]
@@ -253,3 +260,4 @@ label_settings = SubResource("LabelSettings_fa8t4")
 [connection signal="area_exited" from="EnemyHandler/monster3" to="EnemyHandler/monster3" method="_on_area_exited"]
 [connection signal="area_entered" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_entered"]
 [connection signal="area_exited" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_exited"]
+
