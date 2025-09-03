@@ -59,6 +59,11 @@
 
 ## Screenshots
 
+[](https://github.com/Panuwat47/Game-Project/blob/main/Screenshot%202025-09-04%20011415.png)
+[](https://github.com/Panuwat47/Game-Project/blob/main/Screenshot%202025-09-04%20011424.png)
+[](https://github.com/Panuwat47/Game-Project/blob/main/Screenshot%202025-09-04%20011501.png)
+[](https://github.com/Panuwat47/Game-Project/blob/main/Screenshot%202025-09-04%20011625.png)
+
 ---
 
 ![Screenshots](https://drive.google.com/file/d/1nJ11kscqdUTfUOxNvgWvP7SKEJilsgOX/view?usp=drive_link)
@@ -69,8 +74,12 @@
 เปิด [itch.io](https://panuwat-noonlukkam.itch.io/deck-dungeons-rolling-in-to-darkness)
 
 
+
 ---
 
 ## เครดิต
 
-พัฒนาโดยนิสิต CP-AI มหาวิทยาลัย [ชื่อมหาวิทยาลัยของคุณ]
+-[](https://github.com/guladam/deck_builder_tutorial/tree/season-1-code)
+-ตัวละคร[]()
+-[]()
+-[]()
