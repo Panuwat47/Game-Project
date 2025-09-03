@@ -33,7 +33,7 @@
 ---
 
 ### 2. Monster 1  
-![Monster 1](images/monster1.png)
+![Monster 1](char_blue_2.png)
 
 ---
 
