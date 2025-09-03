@@ -1,8 +1,57 @@
-[gd_scene load_steps=4 format=3 uid="uid://yqepflqpt2tj"]
+[gd_scene load_steps=10 format=3 uid="uid://yqepflqpt2tj"]
 
-[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="1_np3dp"]
+[ext_resource type="StyleBox" uid="uid://dc6qvymxosmbx" path="res://Themes&Styles/mana_style.tres" id="1_f63i6"]
 [ext_resource type="Script" uid="uid://bja6o65uoxbdx" path="res://scripts/ui_script/tooltip.gd" id="2_hoai8"]
+[ext_resource type="FontFile" uid="uid://c2ee1ssgcq3mn" path="res://fonts/TAChaiLai_Pixelforpersonal/TAChaiLai_Pixelforpersonal/TA ChaiLai_Pixel For Personal user.otf" id="2_o07bd"]
 [ext_resource type="Texture2D" uid="uid://dakunystowls7" path="res://assets/Free - Raven Fantasy Icons/Separated Files/16x16/fa4.png" id="3_hoai8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58jnp"]
+bg_color = Color(0.27451, 0.6, 0.6, 0.541176)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_466ly"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2l2q"]
+bg_color = Color(0.839216, 0.0823529, 0.113725, 0.635294)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(2.11775e-06, 0.680807, 0.915195, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52mx2"]
+bg_color = Color(0.6, 0, 0.113725, 0.854902)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(4.81307e-07, 0.392658, 0.535258, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_byk22"]
+default_font = ExtResource("2_o07bd")
+default_font_size = 32
+Button/styles/disabled = SubResource("StyleBoxFlat_58jnp")
+Button/styles/focus = SubResource("StyleBoxEmpty_466ly")
+Button/styles/hover = SubResource("StyleBoxFlat_a2l2q")
+Button/styles/normal = ExtResource("1_f63i6")
+Button/styles/pressed = SubResource("StyleBoxFlat_52mx2")
+Panel/styles/panel = ExtResource("1_f63i6")
+PanelContainer/styles/panel = ExtResource("1_f63i6")
 
 [node name="Tooltip" type="PanelContainer"]
 anchors_preset = 5
@@ -12,7 +61,7 @@ offset_left = -350.0
 offset_right = 350.0
 offset_bottom = 220.0
 grow_horizontal = 2
-theme = ExtResource("1_np3dp")
+theme = SubResource("Theme_byk22")
 script = ExtResource("2_hoai8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

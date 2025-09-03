@@ -11,6 +11,7 @@ type = 0
 target = 1
 cost = 2
 icon = ExtResource("1_kqbg8")
-tooltip_text = "ทำ[color=\"ff0000\"] 6 [/color]ดาเมจให้แก่ศัตรู"
+tooltip_text = "โจมตีมอนสเตอร์ตัวที่เลือกและทำดาเมจ[color=\"ff0000\"] 6 [/color]หน่วยแก่มอนสเตอร์
+"
 sound = ExtResource("3_cwuov")
 metadata/_custom_type_script = "uid://bq3oj1t643qo4"

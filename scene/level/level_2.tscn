@@ -1,20 +1,24 @@
-[gd_scene load_steps=24 format=3 uid="uid://d07x16gniim6r"]
+[gd_scene load_steps=28 format=3 uid="uid://d07x16gniim6r"]
 
 [ext_resource type="Script" uid="uid://dju6wah07bc6b" path="res://scene/main.gd" id="1_si3nk"]
 [ext_resource type="Resource" uid="uid://qnmslf1h4v02" path="res://player/player.tres" id="2_2idog"]
-[ext_resource type="AudioStream" uid="uid://d4juqkl2us0gh" path="res://sound/Theme_song/Bg_themesong1.mp3" id="3_mo43c"]
+[ext_resource type="AudioStream" uid="uid://ckhqxllj2th57" path="res://sound/Theme_song/Bg_themesong2.mp3" id="3_8dlin"]
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="4_lb5s6"]
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="5_8dlin"]
+[ext_resource type="Texture2D" uid="uid://bcbuqnqswk5yw" path="res://assets/Background/Google_AI_Studio_2025-08-24T15_30_45.792Z.png" id="6_8dlin"]
 [ext_resource type="Script" uid="uid://d0j2o37u8fvkw" path="res://monster/enemy_script/enemy_handler.gd" id="6_i3faa"]
-[ext_resource type="PackedScene" uid="uid://btumtdbsprloa" path="res://monster/monster2/monster2.tscn" id="7_hdfrx"]
-[ext_resource type="Script" uid="uid://c1vmfbxaq47mq" path="res://monster/monster2/monster_2.gd" id="8_qm5wa"]
-[ext_resource type="Resource" uid="uid://dt038f73udmmr" path="res://monster/monster2/golem.tres" id="9_v1b44"]
 [ext_resource type="PackedScene" uid="uid://blbos0eexrqok" path="res://monster/monster1/monster1.tscn" id="10_kg3ey"]
 [ext_resource type="Resource" uid="uid://bxbju4rqktbqx" path="res://monster/monster1/worm.tres" id="11_gsar0"]
 [ext_resource type="PackedScene" uid="uid://bfmwk2xm77yow" path="res://player/player.tscn" id="12_di2vw"]
+[ext_resource type="PackedScene" uid="uid://j65r8cfcepr5" path="res://monster/monster4/monster4.tscn" id="13_8dlin"]
+[ext_resource type="PackedScene" uid="uid://6gig0v74mrns" path="res://monster/monster3/monster3.tscn" id="13_i3faa"]
 [ext_resource type="PackedScene" uid="uid://ce00hqw03mxic" path="res://scene/card_target_selector/card_target_selector.tscn" id="13_yhw8p"]
+[ext_resource type="Script" uid="uid://d2ikn5o4mxxtg" path="res://monster/monster3/monster_3.gd" id="14_hdfrx"]
+[ext_resource type="Script" uid="uid://cmpdfg823qda2" path="res://monster/monster4/monster_4.gd" id="14_i3faa"]
 [ext_resource type="Script" uid="uid://fbstc00eoqbf" path="res://player/player_handler.gd" id="14_l1quy"]
 [ext_resource type="Script" uid="uid://4rik44eyxdyu" path="res://scripts/battle_ui.gd" id="15_cmghl"]
+[ext_resource type="Resource" uid="uid://mdqh3u56nf0d" path="res://monster/monster4/monster_4.tres" id="15_hdfrx"]
+[ext_resource type="Resource" uid="uid://dli71attp0380" path="res://monster/monster3/monster_3.tres" id="15_qm5wa"]
 [ext_resource type="Script" uid="uid://tjm0npo5t022" path="res://scripts/hand.gd" id="16_kh3fx"]
 [ext_resource type="PackedScene" uid="uid://dsj2l2j31biep" path="res://ui/mana_ui.tscn" id="17_i0asq"]
 [ext_resource type="PackedScene" uid="uid://yqepflqpt2tj" path="res://ui/tooltip.tscn" id="18_urlt6"]
@@ -40,7 +44,7 @@ corner_radius_bottom_left = 20
 [node name="level2" type="Node2D"]
 script = ExtResource("1_si3nk")
 char_stats = ExtResource("2_2idog")
-music = ExtResource("3_mo43c")
+music = ExtResource("3_8dlin")
 
 [node name="Game" type="Node" parent="."]
 script = ExtResource("4_lb5s6")
@@ -50,6 +54,7 @@ z_index = -2
 texture_filter = 1
 position = Vector2(794, 245.335)
 scale = Vector2(1.71137, 1.71137)
+texture = ExtResource("6_8dlin")
 
 [node name="carddropare" type="Area2D" parent="."]
 collision_layer = 3
@@ -62,21 +67,28 @@ debug_color = Color(0, 0.6, 0.701961, 0.364706)
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("6_i3faa")
 
-[node name="golem" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("7_hdfrx")]
-position = Vector2(1036, 519)
-scale = Vector2(2.55, 2.55)
-collision_layer = 4
-script = ExtResource("8_qm5wa")
-stats = ExtResource("9_v1b44")
-
 [node name="worm" parent="EnemyHandler" instance=ExtResource("10_kg3ey")]
-position = Vector2(1312, 586)
+position = Vector2(1374, 644)
 scale = Vector2(1.815, 1.815)
 stats = ExtResource("11_gsar0")
 
+[node name="monster3" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("13_i3faa")]
+position = Vector2(888, 604)
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("14_hdfrx")
+stats = ExtResource("15_qm5wa")
+
+[node name="monster4" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("13_8dlin")]
+position = Vector2(1127, 734)
+scale = Vector2(2.57625, 2.57625)
+collision_layer = 4
+script = ExtResource("14_i3faa")
+stats = ExtResource("15_hdfrx")
+
 [node name="Player" parent="." instance=ExtResource("12_di2vw")]
 z_index = 1
-position = Vector2(217, 549)
+position = Vector2(322, 626)
 scale = Vector2(1.61602, 1.61602)
 stats = ExtResource("2_2idog")
 
@@ -106,6 +118,7 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 20
 alignment = 1
 script = ExtResource("16_kh3fx")
+metadata/_edit_use_anchors_ = true
 
 [node name="ManaUI" parent="battleUI" instance=ExtResource("17_i0asq")]
 texture_filter = 1
@@ -116,10 +129,12 @@ offset_bottom = -41.0
 theme = null
 theme_override_styles/panel = SubResource("StyleBoxFlat_v2gmf")
 char_stats = ExtResource("2_2idog")
+metadata/_edit_use_anchors_ = true
 
 [node name="Tooltip" parent="battleUI" instance=ExtResource("18_urlt6")]
 offset_top = 28.0
 offset_bottom = 248.0
+metadata/_edit_use_anchors_ = true
 
 [node name="EndTurnButton" type="Button" parent="battleUI"]
 unique_name_in_owner = true
@@ -136,6 +151,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("19_ls3b4")
 text = "End This Turn"
+metadata/_edit_use_anchors_ = true
 
 [node name="RedFlash" type="CanvasLayer" parent="."]
 layer = 2
@@ -149,6 +165,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="RedFlash"]
 wait_time = 0.1
@@ -160,5 +177,7 @@ layer = 2
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("21_ss1aw")]
 visible = false
 
-[connection signal="area_entered" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_entered"]
-[connection signal="area_exited" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_exited"]
+[connection signal="area_entered" from="EnemyHandler/monster3" to="EnemyHandler/monster3" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/monster3" to="EnemyHandler/monster3" method="_on_area_exited"]
+[connection signal="area_entered" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_exited"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dscuxmo7m7bft"]
+
+[ext_resource type="Script" uid="uid://dbr1fvyis5054" path="res://scripts/ui_script/victory.gd" id="1_dyv4x"]
+[ext_resource type="Texture2D" uid="uid://bs6p0x0vhovv0" path="res://assets/MainMenu/victory.png" id="1_ges26"]
+[ext_resource type="FontFile" uid="uid://c2ee1ssgcq3mn" path="res://fonts/TAChaiLai_Pixelforpersonal/TAChaiLai_Pixelforpersonal/TA ChaiLai_Pixel For Personal user.otf" id="2_dyv4x"]
+[ext_resource type="AudioStream" uid="uid://bwge0i0bqh34v" path="res://sound/winner-victory-champions-background-music-394839.mp3" id="2_vs40d"]
+[ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="3_vs40d"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="4_p76p6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rew88"]
+font = ExtResource("2_dyv4x")
+font_size = 131
+font_color = Color(1, 1, 0, 1)
+
+[node name="victory" type="Node2D"]
+script = ExtResource("1_dyv4x")
+music = ExtResource("2_vs40d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(768, 452)
+scale = Vector2(1.1816, 1.1816)
+texture = ExtResource("1_ges26")
+
+[node name="Victory" type="Label" parent="Sprite2D"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1215.5
+offset_top = -711.521
+offset_right = -192.5
+offset_bottom = -472.521
+grow_horizontal = 2
+grow_vertical = 2
+text = "Victorius!!!"
+label_settings = SubResource("LabelSettings_rew88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Sprite2D"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -954.0
+offset_top = -357.764
+offset_right = -454.0
+offset_bottom = -265.764
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_vs40d")
+theme_override_fonts/font = ExtResource("4_p76p6")
+theme_override_font_sizes/font_size = 96
+text = "Main Menu"
