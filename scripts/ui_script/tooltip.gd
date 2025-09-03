@@ -27,10 +27,11 @@ func show_tooltip(icon: Texture, text: String) -> void:
 	tween.tween_property(self, "modulate", Color.WHITE, fade_seconds)
 	
 func hide_tooltip() -> void:
+	if not is_inside_tree():
+		return  # ถ้า node โดนลบ/ไม่อยู่ในฉาก จะไม่เรียก get_tree() และไม่ error
 	is_visible_now = false
 	if tween:
 		tween.kill()
-
 	get_tree().create_timer(fade_seconds, false).timeout.connect(hide_animation)
 	
 func hide_animation() -> void:

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Diceventure:Rolling in to the darkness"
-run/main_scene="uid://c0si0b2v6041q"
+config/name="Deck & Dungeons: Rolling in to darkness"
+run/main_scene="uid://dy4qyub6yvbp2"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://bcp3isthou8uo"
 
@@ -30,6 +30,9 @@ SFXPlayer="*res://sound/sfx_player.tscn"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/size/borderless=true
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [editor]
 

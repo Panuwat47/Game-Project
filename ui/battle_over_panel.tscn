@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3jd76vgrs4dp"]
+[gd_scene load_steps=6 format=3 uid="uid://c3jd76vgrs4dp"]
 
 [ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="1_fgxnb"]
 [ext_resource type="Script" uid="uid://cjigttys4p16f" path="res://scripts/ui_script/battle_over_panel.gd" id="2_2bhmx"]
+[ext_resource type="FontFile" uid="uid://culewe8i5g3ca" path="res://fonts/monogram/ttf/monogram.ttf" id="3_1vsyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bhmx"]
 bg_color = Color(0, 0, 0, 0.345098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1vsyq"]
+font = ExtResource("3_1vsyq")
 font_size = 161
 
 [node name="BattleOverPanel" type="Panel"]
