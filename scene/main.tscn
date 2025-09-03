@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c0si0b2v6041q"]
+[gd_scene load_steps=21 format=3 uid="uid://c0si0b2v6041q"]
 
 [ext_resource type="Script" uid="uid://dju6wah07bc6b" path="res://scene/main.gd" id="1_jcbur"]
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
@@ -12,10 +12,7 @@
 [ext_resource type="Resource" uid="uid://bxbju4rqktbqx" path="res://monster/monster1/worm.tres" id="6_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 [ext_resource type="Script" uid="uid://4rik44eyxdyu" path="res://scripts/battle_ui.gd" id="8_v2gmf"]
-[ext_resource type="PackedScene" uid="uid://btumtdbsprloa" path="res://monster/monster2/monster2.tscn" id="9_0vlqb"]
 [ext_resource type="Script" uid="uid://fbstc00eoqbf" path="res://player/player_handler.gd" id="9_hybxs"]
-[ext_resource type="Script" uid="uid://c1vmfbxaq47mq" path="res://monster/monster2/monster_2.gd" id="10_gjnwh"]
-[ext_resource type="Resource" uid="uid://dt038f73udmmr" path="res://monster/monster2/golem.tres" id="11_fdqew"]
 [ext_resource type="PackedScene" uid="uid://dsj2l2j31biep" path="res://ui/mana_ui.tscn" id="12_mswub"]
 [ext_resource type="PackedScene" uid="uid://yqepflqpt2tj" path="res://ui/tooltip.tscn" id="14_hybxs"]
 [ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="15_v2gmf"]
@@ -61,13 +58,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.364706)
 
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("5_jcbur")
-
-[node name="golem" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("9_0vlqb")]
-position = Vector2(1036, 519)
-scale = Vector2(2.55, 2.55)
-collision_layer = 4
-script = ExtResource("10_gjnwh")
-stats = ExtResource("11_fdqew")
 
 [node name="worm" parent="EnemyHandler" instance=ExtResource("6_of57s")]
 position = Vector2(1312, 586)
@@ -159,6 +149,3 @@ layer = 2
 
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_tv8i1")]
 visible = false
-
-[connection signal="area_entered" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_entered"]
-[connection signal="area_exited" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_exited"]
