@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://dli71attp0380"]
+
+[ext_resource type="Script" uid="uid://d2g5yc5nbqg7g" path="res://scripts/custom_resources/enemy_stats.gd" id="1_bmmeg"]
+[ext_resource type="PackedScene" uid="uid://m8abbv8d440n" path="res://monster/monster3/monster_3ai.tscn" id="1_ylhtx"]
+[ext_resource type="Texture2D" uid="uid://cv2x7okp0ofa4" path="res://assets/monster/craftpix-781196-free-desert-enemy-sprite-sheets-pixel-art/3 Scorpio/Scorpio.png" id="2_0lna6"]
+
+[resource]
+script = ExtResource("1_bmmeg")
+ai = ExtResource("1_ylhtx")
+max_health = 7
+art = ExtResource("2_0lna6")
+metadata/_custom_type_script = "uid://d2g5yc5nbqg7g"

@@ -1,5 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://c0si0b2v6041q"]
 
+[gd_scene load_steps=34 format=3 uid="uid://c0si0b2v6041q"]
+
+
 [ext_resource type="Script" uid="uid://dju6wah07bc6b" path="res://scene/main.gd" id="1_jcbur"]
 [ext_resource type="Script" uid="uid://bcs0elgnr810r" path="res://scripts/game.gd" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://tjm0npo5t022" path="res://scripts/hand.gd" id="2_wp4xf"]
@@ -13,11 +16,24 @@
 [ext_resource type="PackedScene" uid="uid://dfih0lou13t2e" path="res://scene/level1.tscn" id="8_of57s"]
 [ext_resource type="Script" uid="uid://4rik44eyxdyu" path="res://scripts/battle_ui.gd" id="8_v2gmf"]
 [ext_resource type="Script" uid="uid://fbstc00eoqbf" path="res://player/player_handler.gd" id="9_hybxs"]
+
+[ext_resource type="Script" uid="uid://c1vmfbxaq47mq" path="res://monster/monster2/monster_2.gd" id="10_gjnwh"]
+[ext_resource type="Resource" uid="uid://dt038f73udmmr" path="res://monster/monster2/golem.tres" id="11_fdqew"]
+[ext_resource type="PackedScene" uid="uid://6gig0v74mrns" path="res://monster/monster3/monster3.tscn" id="12_gtqqq"]
+
 [ext_resource type="PackedScene" uid="uid://dsj2l2j31biep" path="res://ui/mana_ui.tscn" id="12_mswub"]
+[ext_resource type="Script" uid="uid://d2ikn5o4mxxtg" path="res://monster/monster3/monster_3.gd" id="13_gn2wi"]
+[ext_resource type="Resource" uid="uid://dli71attp0380" path="res://monster/monster3/monster_3.tres" id="14_gn2wi"]
 [ext_resource type="PackedScene" uid="uid://yqepflqpt2tj" path="res://ui/tooltip.tscn" id="14_hybxs"]
+[ext_resource type="PackedScene" uid="uid://j65r8cfcepr5" path="res://monster/monster4/monster4.tscn" id="15_oldxj"]
 [ext_resource type="Theme" uid="uid://564kf8hrx27g" path="res://Themes&Styles/main_theme.tres" id="15_v2gmf"]
+[ext_resource type="Script" uid="uid://cmpdfg823qda2" path="res://monster/monster4/monster_4.gd" id="16_4jm02"]
 [ext_resource type="Script" uid="uid://chlac7yrr2han" path="res://scripts/ui_script/red_flash.gd" id="16_jcbur"]
+[ext_resource type="Resource" uid="uid://mdqh3u56nf0d" path="res://monster/monster4/monster_4.tres" id="17_4jm02"]
+[ext_resource type="PackedScene" uid="uid://bbtxauaj1ha2e" path="res://monster/boss/boss1.tscn" id="18_io27d"]
 [ext_resource type="PackedScene" uid="uid://c3jd76vgrs4dp" path="res://ui/battle_over_panel.tscn" id="18_tv8i1"]
+[ext_resource type="Script" uid="uid://ba1p7my7io665" path="res://monster/boss/boss_1.gd" id="19_fa8t4"]
+[ext_resource type="Resource" uid="uid://bom705vv7k5rx" path="res://monster/boss/boss.tres" id="20_fa8t4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(1600, 682)
@@ -34,6 +50,9 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="LabelSettings" id="LabelSettings_fa8t4"]
+font_size = 20
+
 [node name="main" type="Node2D"]
 script = ExtResource("1_jcbur")
 char_stats = ExtResource("5_tqoya")
@@ -45,7 +64,7 @@ script = ExtResource("1_wp4xf")
 [node name="level1" parent="." instance=ExtResource("8_of57s")]
 z_index = -2
 texture_filter = 1
-position = Vector2(794, 245.335)
+position = Vector2(700, 241)
 scale = Vector2(1.71137, 1.71137)
 
 [node name="carddropare" type="Area2D" parent="."]
@@ -59,10 +78,40 @@ debug_color = Color(0, 0.6, 0.701961, 0.364706)
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("5_jcbur")
 
+
+[node name="boss" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("18_io27d")]
+position = Vector2(497, 363)
+scale = Vector2(3.815, 3.815)
+collision_layer = 4
+script = ExtResource("19_fa8t4")
+stats = ExtResource("20_fa8t4")
+
+[node name="golem" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("9_0vlqb")]
+position = Vector2(1036, 519)
+scale = Vector2(2.55, 2.55)
+collision_layer = 4
+script = ExtResource("10_gjnwh")
+stats = ExtResource("11_fdqew")
+
+
 [node name="worm" parent="EnemyHandler" instance=ExtResource("6_of57s")]
 position = Vector2(1312, 586)
 scale = Vector2(1.815, 1.815)
 stats = ExtResource("6_v2gmf")
+
+[node name="monster3" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("12_gtqqq")]
+position = Vector2(814, 470)
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("13_gn2wi")
+stats = ExtResource("14_gn2wi")
+
+[node name="monster4" parent="EnemyHandler" groups=["enemies"] instance=ExtResource("15_oldxj")]
+position = Vector2(663, 424)
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("16_4jm02")
+stats = ExtResource("17_4jm02")
 
 [node name="Player" parent="." instance=ExtResource("4_b5f6u")]
 z_index = 1
@@ -80,15 +129,15 @@ hand = NodePath("../battleUI/hand")
 script = ExtResource("8_v2gmf")
 
 [node name="hand" type="HBoxContainer" parent="battleUI"]
-anchors_preset = -1
-anchor_left = 0.446
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.446
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -213.6
-offset_top = -179.0
-offset_right = 386.4
-offset_bottom = 71.0
+offset_left = -300.0
+offset_top = -182.0
+offset_right = 300.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.713703, 0.713703)
@@ -149,3 +198,66 @@ layer = 2
 
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_tv8i1")]
 visible = false
+
+
+[node name="tutorial" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="tutorial"]
+offset_left = 169.0
+offset_top = 806.0
+offset_right = 480.0
+offset_bottom = 834.0
+text = "<- มานาของเรา จะหายไปเมื่อใช้การ์ด"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[node name="Label2" type="Label" parent="tutorial"]
+offset_left = 314.0
+offset_top = 721.0
+offset_right = 735.0
+offset_bottom = 780.0
+text = "<- ทั้งตัวเราและ monster 
+ต่างมีเกราะและพลังชีวิต"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[node name="Label3" type="Label" parent="tutorial"]
+offset_left = 1111.0
+offset_top = 419.0
+offset_right = 1483.0
+offset_bottom = 484.0
+text = "<- สถานะว่า monster จะทำอะไรในตาถัดไป 
+โดยจะมีทั้งโจมตีและป้องกัน"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[node name="Label4" type="Label" parent="tutorial"]
+offset_left = 916.0
+offset_top = 746.0
+offset_right = 1326.0
+offset_bottom = 811.0
+text = "<- การ์ดแอีคชั่นของเรา เลือกได้ตามมานาที่จำกัด"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[node name="Label5" type="Label" parent="tutorial"]
+offset_left = 1169.0
+offset_top = 108.0
+offset_right = 1579.0
+offset_bottom = 173.0
+text = "<- ความสามารถของการ์ด"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[node name="Label6" type="Label" parent="tutorial"]
+offset_left = 1169.0
+offset_top = 829.0
+offset_right = 1377.0
+offset_bottom = 869.0
+text = "กดเพื่อจบรอบของเรา->"
+label_settings = SubResource("LabelSettings_fa8t4")
+
+[connection signal="area_entered" from="EnemyHandler/boss" to="EnemyHandler/boss" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/boss" to="EnemyHandler/boss" method="_on_area_exited"]
+[connection signal="area_entered" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/golem" to="EnemyHandler/golem" method="_on_area_exited"]
+[connection signal="area_entered" from="EnemyHandler/monster3" to="EnemyHandler/monster3" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/monster3" to="EnemyHandler/monster3" method="_on_area_exited"]
+[connection signal="area_entered" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_entered"]
+[connection signal="area_exited" from="EnemyHandler/monster4" to="EnemyHandler/monster4" method="_on_area_exited"]
+
