@@ -28,32 +28,33 @@
 ## ตัวละคร
 
 ### 1. Asta Sinika (ตัวเอก)  
-![Asta Sinika]()
+![Asta Sinika](char_blue_2.png)
 
 ---
 
 ### 2. Monster 1  
-![Monster 1](char_blue_2.png)
+![Monster 1](Scorpio.png)
 
 ---
 
 ### 3. Monster 2  
-![Monster 2](images/monster2.png)
+![Monster 2](Big_bloated.png)
 
 ---
 
 ### 4. Monster 3  
-![Monster 3](images/monster3.png)
+![Monster 3](Centipede.png)
 
 ---
 
 ### 5. Monster 4  
-![Monster 4](images/monster4.png)
+![Monster 4](Mummy.png)
 
 ---
 
 ### 6. Boss  
-![Boss](images/boss.png)
+![Boss](Bringer-of-Death_Attack_1.png)
+
 ---
 
 ## รูปแบบการเล่นและกติกา
